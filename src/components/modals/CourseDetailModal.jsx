@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from 'react';
 import { X, CheckCircle, Download, Calculator, ArrowRight, Briefcase, ChevronDown, ChevronUp } from 'lucide-react';
-export const CourseDetailModal = ({ course, isOpen, onClose, onOpenApply, onOpenBrochure, onOpenEmi }) => {
+import { collegeNameOf } from '@/lib/collegeIdentity';
+export const CourseDetailModal = ({ course, isOpen, onClose, onOpenApply, onOpenBrochure, onOpenEmi, college = null }) => {
     const [expandedSemester, setExpandedSemester] = useState(1);
+    const collegeName = collegeNameOf(college);
     if (!isOpen || !course)
         return null;
     const earlyBirdTotal = Math.round(course.totalFee * 0.8);
@@ -46,7 +48,7 @@ export const CourseDetailModal = ({ course, isOpen, onClose, onOpenApply, onOpen
               </div>
 
               <p className="text-sm text-[#43474d] leading-relaxed">
-                {course.shortDescription} Classes are held live on weekends with interactive doubt-solving, and complete HD video recordings are available 24/7 on the LPU e-Connect mobile and web portal.
+                {course.shortDescription} Classes are held live on weekends with interactive doubt-solving, and complete HD video recordings are available 24/7 on the{collegeName ? ` ${collegeName}` : ''} mobile and web portal.
               </p>
 
               {/* 4 Pillars Stats */}

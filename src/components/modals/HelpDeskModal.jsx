@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { X, Phone, Mail, Clock, MapPin, CheckCircle, Headphones } from 'lucide-react';
 import { INSTITUTION_HIGHLIGHTS } from '@/data/institutionalData';
-export const HelpDeskModal = ({ isOpen, onClose }) => {
+import { collegeNameOf } from '@/lib/collegeIdentity';
+export const HelpDeskModal = ({ isOpen, onClose, college = null }) => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const collegeName = collegeNameOf(college);
     if (!isOpen)
         return null;
     const handleSubmit = (e) => {
@@ -25,7 +27,7 @@ export const HelpDeskModal = ({ isOpen, onClose }) => {
                 Online Siksha Help Desk
               </h3>
               <p className="text-xs text-[#43474d]">
-                Authorized LPU CDOE Admissions & Student Grievance Support
+                {collegeName ? `Authorized ${collegeName} Admissions & Student Grievance Support` : 'Authorized Admissions & Student Grievance Support'}
               </p>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import { CURRENT_YEAR } from "@/constants/years";
+
 /**
  * College title helpers — port of the reference project's
  * src/lib/sectionTitles.ts (JS version).
@@ -12,7 +14,7 @@ export function collegeBase(shortName) {
  * Builds "{Name} Online {Topic} {Year}" — the reference title pattern.
  * The year is appended only when the topic does not already carry one.
  */
-export function collegeSectionTitle(shortName, topic, year = "2026") {
+export function collegeSectionTitle(shortName, topic, year = CURRENT_YEAR) {
   const base = collegeBase(shortName);
   const cleanTopic = String(topic || "").trim();
 

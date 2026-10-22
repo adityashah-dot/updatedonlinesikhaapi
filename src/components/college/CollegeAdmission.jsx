@@ -17,6 +17,7 @@ import CollegeHero from "./CollegeHero";
 import CollegeTableOfContents from "./CollegeTableOfContents";
 import { useSiteActions } from "@/components/shell/SiteActionsContext";
 import { collegeBase, collegeSectionTitle } from "@/lib/collegeTitle";
+import { CURRENT_YEAR } from "@/constants/years";
 
 /**
  * College Admission page — port of the reference "Admission" tab
@@ -68,14 +69,14 @@ export default function CollegeAdmission({
   );
 
   const tocItems = [
-    { id: "admission-highlights", label: data.admissionHighlights?.title || collegeSectionTitle(shortName, "Admission Highlights 2026") },
-    { id: "admission-dates", label: data.admissionDatesMeta?.title || collegeSectionTitle(shortName, "Admission Important Dates 2026") },
-    { id: "eligibility-criteria", label: data.eligibility?.title || collegeSectionTitle(shortName, "Eligibility & Selection Criteria 2026") },
-    { id: "admission-process", label: data.admission?.title || collegeSectionTitle(shortName, "Admission Process 2026") },
-    { id: "application-process", label: data.applicationProcessMeta?.title || collegeSectionTitle(shortName, "Application Process 2026") },
+    { id: "admission-highlights", label: data.admissionHighlights?.title || collegeSectionTitle(shortName, `Admission Highlights ${CURRENT_YEAR}`) },
+    { id: "admission-dates", label: data.admissionDatesMeta?.title || collegeSectionTitle(shortName, `Admission Important Dates ${CURRENT_YEAR}`) },
+    { id: "eligibility-criteria", label: data.eligibility?.title || collegeSectionTitle(shortName, `Eligibility & Selection Criteria ${CURRENT_YEAR}`) },
+    { id: "admission-process", label: data.admission?.title || collegeSectionTitle(shortName, `Admission Process ${CURRENT_YEAR}`) },
+    { id: "application-process", label: data.applicationProcessMeta?.title || collegeSectionTitle(shortName, `Application Process ${CURRENT_YEAR}`) },
     { id: "examination-pattern", label: data.examinationPattern?.title || collegeSectionTitle(shortName, "Examination Pattern") },
     { id: "documents-required", label: data.documentsMeta?.title || collegeSectionTitle(shortName, "Documents Required for Admission") },
-    { id: "scholarship-schemes", label: data.scholarshipSection?.title || collegeSectionTitle(shortName, "Scholarship 2026") },
+    { id: "scholarship-schemes", label: data.scholarshipSection?.title || collegeSectionTitle(shortName, `Scholarship ${CURRENT_YEAR}`) },
     { id: "counseling-callback", label: "Request a Callback" },
     { id: "student-reviews", label: collegeSectionTitle(shortName, "Student Reviews") },
     { id: "blogs", label: "Blogs" },
@@ -178,7 +179,7 @@ export default function CollegeAdmission({
       <CollegeHero
         overview={data}
         college={college}
-        title={collegeSectionTitle(shortName, "Admission Highlights 2026")}
+        title={data.title || collegeSectionTitle(shortName, `Admission Highlights ${CURRENT_YEAR}`)}
         description={admission.intro}
       />
 
@@ -204,12 +205,14 @@ export default function CollegeAdmission({
               <div className="lg:col-span-7 space-y-3">
                 <p className="flex items-center gap-[10px] mb-[10px] text-[11px] sm:text-[12px] font-semibold text-[#1763c5] uppercase tracking-[1.6px]">
                   <span className="w-7 h-1 rounded-full bg-[#1763e9]" />
-                  Admissions Open 2026
+                  {admissionStatus
+                    ? `Admissions ${admissionStatus} ${CURRENT_YEAR}`
+                    : "Admission Information"}
                 </p>
 
                 <h2 className="section-title m-0 mb-[10px] text-xl sm:text-2xl font-extrabold text-[#000f22] font-sans">
                   {data.admissionHighlights?.title ||
-                    collegeSectionTitle(shortName, "Admission Highlights 2026")}
+                    collegeSectionTitle(shortName, `Admission Highlights ${CURRENT_YEAR}`)}
                 </h2>
 
                 {data.admissionHighlights?.description ? (
@@ -268,7 +271,7 @@ export default function CollegeAdmission({
               <div>
                 <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] font-sans">
                   {data.admissionDatesMeta?.title ||
-                    collegeSectionTitle(shortName, "Admission Important Dates 2026")}
+                    collegeSectionTitle(shortName, `Admission Important Dates ${CURRENT_YEAR}`)}
                 </h2>
                 <p className="section-description text-xs sm:text-sm text-[#43474d] leading-relaxed font-normal">
                   {college.name || data.title} releases admission dates for its
@@ -314,7 +317,7 @@ export default function CollegeAdmission({
             >
               <div>
                 <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] font-sans mt-2">
-                  {data.eligibility?.title || collegeSectionTitle(shortName, "Eligibility & Selection Criteria 2026")}
+                  {data.eligibility?.title || collegeSectionTitle(shortName, `Eligibility & Selection Criteria ${CURRENT_YEAR}`)}
                 </h2>
                 <span className="block w-16 h-[5px] rounded-[5px] bg-[#115eaf] mt-1" />
                 {eligibility.intro ? (
@@ -407,7 +410,7 @@ export default function CollegeAdmission({
             >
               <div>
                 <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] font-sans mt-2">
-                  {data.admission?.title || collegeSectionTitle(shortName, "Admission Process 2026")}
+                  {data.admission?.title || collegeSectionTitle(shortName, `Admission Process ${CURRENT_YEAR}`)}
                 </h2>
                 <span className="block w-16 h-[5px] rounded-[5px] bg-[#115eaf] mt-1" />
               </div>
@@ -446,7 +449,7 @@ export default function CollegeAdmission({
               className="page-section card bg-white rounded-2xl border border-[#e7eeff] shadow-xs"
             >
               <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] font-sans">
-                {data.applicationProcessMeta?.title || collegeSectionTitle(shortName, "Application Process 2026")}
+                {data.applicationProcessMeta?.title || collegeSectionTitle(shortName, `Application Process ${CURRENT_YEAR}`)}
               </h2>
 
               <div className="mt-[18px] grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -544,7 +547,7 @@ export default function CollegeAdmission({
               className="page-section card bg-white rounded-2xl border border-[#e7eeff] shadow-xs"
             >
               <h2 className="section-title text-xl sm:text-2xl font-extrabold text-[#000f22] font-sans">
-                {data.scholarshipSection?.title || collegeSectionTitle(shortName, "Scholarship 2026")}
+                {data.scholarshipSection?.title || collegeSectionTitle(shortName, `Scholarship ${CURRENT_YEAR}`)}
               </h2>
 
               <div className="overflow-x-auto rounded-xl border border-[#e7eeff] mt-[18px]">

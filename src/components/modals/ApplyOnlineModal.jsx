@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import { COURSES_DATA } from '@/data/coursesData';
 import { INDIAN_STATES, INDIAN_STATES_CITIES } from '@/data/indianLocations';
 import { X, CheckCircle, ArrowRight, ArrowLeft, Clock, FileText } from 'lucide-react';
-export const ApplyOnlineModal = ({ isOpen, onClose, preselectedCourseId = 'mba', emiPlanDetails = null }) => {
+import { CURRENT_YEAR } from '@/constants/years';
+import { collegeCodeOf, collegeNameOf } from '@/lib/collegeIdentity';
+export const ApplyOnlineModal = ({ isOpen, onClose, preselectedCourseId = 'mba', emiPlanDetails = null, college = null }) => {
+    const collegeCode = collegeCodeOf(college);
+    const collegeName = collegeNameOf(college);
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         fullName: '',
@@ -32,7 +36,7 @@ export const ApplyOnlineModal = ({ isOpen, onClose, preselectedCourseId = 'mba',
         else {
             // Generate Application ID
             const randomNum = Math.floor(1000 + Math.random() * 9000);
-            const generatedId = `OS-LPU-2026-${randomNum}`;
+            const generatedId = `OS-${collegeCode}-${CURRENT_YEAR}-${randomNum}`;
             setSubmittedAppId(generatedId);
             setStep(4);
         }
@@ -239,7 +243,7 @@ export const ApplyOnlineModal = ({ isOpen, onClose, preselectedCourseId = 'mba',
               <div className="pt-2 flex items-start gap-2">
                 <input type="checkbox" id="agreeTerms" required checked={formData.agreedToTerms} onChange={(e) => handleInputChange('agreedToTerms', e.target.checked)} className="mt-1 w-4 h-4 rounded text-[#115eaf] focus:ring-[#115eaf] cursor-pointer"/>
                 <label htmlFor="agreeTerms" className="text-xs text-[#43474d] cursor-pointer">
-                  I confirm that the submitted educational credentials are valid and authorize Online Siksha & LPU CDOE to initiate document verification and send admission updates via Call/WhatsApp.
+                  I confirm that the submitted educational credentials are valid and authorize Online Siksha{collegeName ? ` & ${collegeName}` : ''} to initiate document verification and send admission updates via Call/WhatsApp.
                 </label>
               </div>
 

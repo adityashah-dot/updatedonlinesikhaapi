@@ -80,6 +80,9 @@ export default function SiteShell({ children, universities = [] }) {
   const [isHelpDeskModalOpen, setIsHelpDeskModalOpen] = useState(false);
   const [isTrackModalOpen, setIsTrackModalOpen] = useState(false);
   const [isCounselorModalOpen, setIsCounselorModalOpen] = useState(false);
+  // The university of the page the visitor is on — the modals use it so they
+  // never show another university's name.
+  const [activeCollege, setActiveCollege] = useState(null);
 
   // Handlers
   const handleOpenCourseDetail = (course) => {
@@ -128,6 +131,7 @@ export default function SiteShell({ children, universities = [] }) {
     onOpenCounselor: () => setIsCounselorModalOpen(true),
     onOpenTrack: () => setIsTrackModalOpen(true),
     onSelectCourse: handleSelectCourseById,
+    setActiveCollege: setActiveCollege,
   };
 
   return (
@@ -231,6 +235,7 @@ export default function SiteShell({ children, universities = [] }) {
         {/* Modals Container */}
         <CourseDetailModal
           course={selectedCourseForDetail}
+          college={activeCollege}
           isOpen={selectedCourseForDetail !== null}
           onClose={() => setSelectedCourseForDetail(null)}
           onOpenApply={(courseId) => {
@@ -256,6 +261,7 @@ export default function SiteShell({ children, universities = [] }) {
 
         <ApplyOnlineModal
           isOpen={isApplyModalOpen}
+          college={activeCollege}
           onClose={() => {
             setIsApplyModalOpen(false);
             setEmiPlanDetails(null);
@@ -266,12 +272,14 @@ export default function SiteShell({ children, universities = [] }) {
 
         <BrochureModal
           isOpen={isBrochureModalOpen}
+          college={activeCollege}
           onClose={() => setIsBrochureModalOpen(false)}
           selectedCourse={selectedCourseForBrochure}
         />
 
         <LmsPortalModal
           isOpen={isLmsModalOpen}
+          college={activeCollege}
           onClose={() => setIsLmsModalOpen(false)}
           onOpenApply={() => {
             setIsLmsModalOpen(false);
@@ -281,11 +289,13 @@ export default function SiteShell({ children, universities = [] }) {
 
         <HelpDeskModal
           isOpen={isHelpDeskModalOpen}
+          college={activeCollege}
           onClose={() => setIsHelpDeskModalOpen(false)}
         />
 
         <TrackApplicationModal
           isOpen={isTrackModalOpen}
+          college={activeCollege}
           onClose={() => setIsTrackModalOpen(false)}
         />
 

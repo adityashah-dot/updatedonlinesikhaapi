@@ -1,6 +1,6 @@
 import {
+  fetchCollegePage,
   getCollegeBlogs,
-  getCollegeBySlug,
   getCollegeCourses,
   getCollegeGallery,
   getCollegeNavbarList,
@@ -8,6 +8,11 @@ import {
 } from "@/services/collegeApi";
 import { mapCollegePayload } from "@/services/collegeMapper";
 import { mapOverviewData } from "@/services/overviewMapper";
+import {
+  buildCollegeNavigation,
+  pageSectionOf,
+  resolveNavTarget,
+} from "@/services/collegeNavigation";
 import { buildMockCollegePayload } from "@/data/mockCollegePayload";
 
 const IS_TEST = false;
@@ -119,39 +124,30 @@ export function withSection(slugParam, sectionParam) {
  * /universities/[...slug].
  *
  * - Reads the slug and splits off the optional sub-page.
- * - Calls the production college API (base page, then the `?sub=` variant).
- * - Falls back to the base college payload when the API does not serve the
- *   requested sub-page, so the page renders instead of 404-ing.
- * - Maps the payload with the existing mapper and loads the college navbar.
+ * - Loads the base page of the college and the navigation the CMS publishes
+ *   for it (`GET /website/colleges/navbar-list/{collegeId}`).
+ * - A sub page exists only when the CMS publishes it: the requested path is
+ *   matched against the published navigation. When it does not match, the
+ *   loader answers `{ unavailable: true }` and the route returns 404 — the
+ *   Overview content is never re-labelled as a Courses/Admission page.
+ * - The template of the page is taken from the CMS payload itself
+ *   (`shortTitle` / `navbarTitle`), never guessed from the URL text.
  *
  * Returns `null` only when the college itself cannot be resolved.
  */
-export async function loadCollegePage(slugParts) {
+export async function loadCollegePage(slugParts, options = {}) {
+  const { basePath = "/colleges" } = options;
   const { collegeName, sub, fullSlug } = splitSlug(slugParts);
 
   if (!collegeName) return null;
 
-  let payload = null;
+  let payload = await fetchCollegePage(collegeName, "");
 
-  if (sub) {
-    try {
-      payload = await getCollegeBySlug(collegeName, sub);
-    } catch (error) {
-      console.warn(
-        `Sub page "${sub}" is not served by the API for ${fullSlug}; ` +
-          "falling back to the base college payload."
-      );
-      payload = null;
-    }
-  }
-
-  if (!hasCollegeData(payload)) {
-    try {
-      payload = await getCollegeBySlug(collegeName, "");
-    } catch (error) {
-      console.error(`College fetch failed for ${fullSlug}:`, error.message);
-      payload = null;
-    }
+  // Some CMS pages publish a slug that carries its own sub path
+  // ("<college>-courses/<segment>"). They are only reachable as a whole
+  // path, so the full path is tried when the first segment alone is unknown.
+  if (!hasCollegeData(payload) && fullSlug.includes("/")) {
+    payload = await fetchCollegePage(fullSlug, "");
   }
 
   if (!hasCollegeData(payload)) {
@@ -160,21 +156,56 @@ export async function loadCollegePage(slugParts) {
     payload = buildMockCollegePayload(fullSlug);
   }
 
-  const college = mapCollegePayload(payload, { slug: fullSlug });
+  const college = mapCollegePayload(payload, { slug: collegeName });
 
   if (!college) return null;
 
   const collegeId = college.college?.id || "";
-  // Base college slug (without the sub-page) used for every generated link.
+  // Canonical slug of the college (without the sub-page) used for links.
   const collegeSlug = college.college?.slug || collegeName;
 
-  const [tabs, courses, gallery, recruiters, blogs] = await Promise.all([
+  const [navEntries, courses, gallery, recruiters, blogs] = await Promise.all([
     getCollegeNavbarList(collegeId, IS_TEST),
     getCollegeCourses(collegeId),
     getCollegeGallery(collegeId),
     getCollegeRecruiters(collegeId),
     getCollegeBlogs(collegeId),
   ]);
+
+  const nav = buildCollegeNavigation({
+    entries: navEntries,
+    navBase: collegeSlug,
+    basePath,
+  });
+
+  const target = resolveNavTarget({
+    requestedPath: fullSlug,
+    navBase: collegeSlug,
+    entries: navEntries,
+  });
+
+  // The API does not publish this page — the route must answer 404.
+  if (!target) {
+    return { unavailable: true, college, nav, collegeSlug };
+  }
+
+  if (target.kind === "sub") {
+    const subPayload = await fetchCollegePage(collegeName, target.sub);
+
+    if (!hasCollegeData(subPayload)) {
+      return { unavailable: true, college, nav, collegeSlug };
+    }
+
+    payload = subPayload;
+  } else if (target.kind === "page") {
+    const pagePayload = await fetchCollegePage(target.slug, "");
+
+    if (!hasCollegeData(pagePayload)) {
+      return { unavailable: true, college, nav, collegeSlug };
+    }
+
+    payload = pagePayload;
+  }
 
   const overview = mapOverviewData(payload, {
     courses,
@@ -183,10 +214,14 @@ export async function loadCollegePage(slugParts) {
     blogs,
   });
 
+  const section =
+    target.kind === "base" ? "overview" : pageSectionOf(payload);
+
   return {
     college,
-    tabs,
+    nav,
     overview,
+    section,
     sub,
     fullSlug,
     collegeSlug,

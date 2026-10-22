@@ -19,6 +19,7 @@ import CollegeHero from "./CollegeHero";
 import CollegeTableOfContents from "./CollegeTableOfContents";
 import { useSiteActions } from "@/components/shell/SiteActionsContext";
 import { collegeBase, collegeSectionTitle } from "@/lib/collegeTitle";
+import { CURRENT_YEAR } from "@/constants/years";
 
 const PILLAR_ICON = {
   award: Award,
@@ -74,7 +75,7 @@ export default function CollegeScholarships({
   const courses = college.courses || [];
 
   const tocItems = [
-    { id: "scholarship-overview", label: data.scholarshipSection?.title || "Scholarships Overview 2026" },
+    { id: "scholarship-overview", label: data.scholarshipSection?.title || `Scholarships Overview ${CURRENT_YEAR}` },
     { id: "scholarship-calculator", label: "Interactive Tuition Fee & Savings Calculator" },
     { id: "scholarship-schemes", label: data.scholarshipSection?.title || "Scholarship Schemes & Concessions" },
     { id: "blogs", label: "Blogs" },
@@ -155,7 +156,7 @@ export default function CollegeScholarships({
       <CollegeHero
         overview={data}
         college={college}
-        title="Scholarships & Fee Discounts"
+        title={data.title || "Scholarships & Fee Discounts"}
         description={
           data.hero?.description ||
           "Fee waivers, merit scholarships and zero-cost EMI options for online degree programmes."
@@ -183,10 +184,10 @@ export default function CollegeScholarships({
             >
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFBEB] text-[#92400E] border border-[#FDE68A] text-xs font-bold">
                 <Sparkles className="w-3.5 h-3.5 text-[#D97706]" />
-                Fee Waivers &amp; Concessions 2026
+                Fee Waivers &amp; Concessions {CURRENT_YEAR}
               </span>
               <h1 className="section-title mt-3 text-3xl sm:text-4xl font-bold text-[#000f22] tracking-tight font-sans">
-                Scholarships &amp; Fee Discounts
+                {data.title || "Scholarships & Fee Discounts"}
               </h1>
               <p className="section-description text-xs sm:text-sm text-[#43474d] leading-relaxed">
                 {data.scholarshipSection.intro}

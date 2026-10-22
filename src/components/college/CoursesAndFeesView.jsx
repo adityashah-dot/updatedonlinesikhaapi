@@ -91,6 +91,7 @@ export default function CoursesAndFeesView({
   const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState("all");
   const [sortBy, setSortBy] = useState("popularity");
+  const [campusImageFailed, setCampusImageFailed] = useState(false);
 
   const courses = coursesData.courses || [];
   const categories = coursesData.courseCategories || [];
@@ -99,6 +100,14 @@ export default function CoursesAndFeesView({
   const admissionInfo = coursesData.admissionInfo || {};
   const universityName =
     overview.shortName || college.college?.shortName || college.name || "";
+
+  // Campus image of the hero slot. The API publishes it on the college
+  // record (`college_id.collegeImage`); when it is missing the slot falls
+  // back to a neutral placeholder instead of a broken image.
+  const campusImage =
+    college.college?.collegeImage || overview.hero?.backgroundImage || "";
+  const collegeName =
+    college.college?.name || college.name || college.title || overview.title || "";
 
   const visibleCourses = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -157,8 +166,8 @@ export default function CoursesAndFeesView({
   const learningRows = coursesData.learningPlatform?.items || [];
   const admissionDates = coursesData.admissionDates || [];
 
-  const renderFeeTable = (rows, label, badge, subtitle) => (
-    <div className="bg-white rounded-xl border border-[#e7eeff] overflow-hidden flex flex-col justify-between">
+  const renderFeeTable = (rows, label, badge, subtitle, key) => (
+    <div key={key} className="bg-white rounded-xl border border-[#e7eeff] overflow-hidden flex flex-col justify-between">
       <div>
         <div className="px-5 py-3.5 bg-[#f0f3ff] border-b border-[#e7eeff] flex items-center justify-between">
           <div>
@@ -323,7 +332,32 @@ export default function CoursesAndFeesView({
               ) : null}
             </div>
 
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-4 space-y-4">
+              {/* Campus image slot — shows the API image, else a placeholder */}
+              <div className="rounded-2xl overflow-hidden border border-[#e7eeff] shadow-xs bg-[#f9f9ff]">
+                {campusImage && !campusImageFailed ? (
+                  <img
+                    src={campusImage}
+                    alt={`${collegeName} Campus`}
+                    className="w-full h-48 sm:h-60 object-cover"
+                    loading="lazy"
+                    onError={() => setCampusImageFailed(true)}
+                  />
+                ) : (
+                  <div className="h-48 sm:h-60 w-full flex flex-col items-center justify-center gap-2 text-center px-6 bg-white">
+                    <span className="material-symbols-outlined text-[30px] leading-none text-[#115eaf]">
+                      image
+                    </span>
+                    <span className="text-xs sm:text-sm font-semibold text-[#000f22] font-sans">
+                      {collegeName}
+                    </span>
+                    <span className="text-[11px] font-normal text-[#74777e]">
+                      Campus image placeholder
+                    </span>
+                  </div>
+                )}
+              </div>
+
               {admissionInfo.status || admissionInfo.deadline ? (
                 <div className="rounded-xl p-4 sm:p-5 bg-white border border-[#115eaf]/25 shadow-md relative overflow-hidden">
                   <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-[#d5e3ff]/50 rounded-full blur-2xl pointer-events-none" />
@@ -426,7 +460,7 @@ export default function CoursesAndFeesView({
           {feeRows.length > 0 && (
             <section
               id="fee-structure"
-              className="content-block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-[100px]"
+              className="content-block scroll-mt-[100px]"
             >
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-3 gap-3">
                 <div>
@@ -446,7 +480,8 @@ export default function CoursesAndFeesView({
                     courses.filter((course) => course.category === entry.key),
                     entry.title,
                     entry.badge,
-                    coursesData.coursesFees?.durationLabel
+                    coursesData.coursesFees?.durationLabel,
+                    entry.key
                   )
                 )}
               </div>
@@ -454,7 +489,7 @@ export default function CoursesAndFeesView({
           )}
 
           {/* EMI banner */}
-          <section className="content-block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className="content-block">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 rounded-2xl bg-gradient-to-r from-[#e7eeff] via-[#f0f3ff] to-[#d5e3ff] border border-[#115eaf]/30">
               <div className="flex items-center gap-3.5">
                 <div className="w-10 h-10 rounded-[11px] bg-[#115eaf] text-white flex items-center justify-center shrink-0">
@@ -488,7 +523,7 @@ export default function CoursesAndFeesView({
               id="all-courses"
               className="content-block bg-[#f0f3ff]/50 border-y border-[#e7eeff] scroll-mt-[100px]"
             >
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="w-full">
                 <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] tracking-tight font-sans">
                   {universityName
                     ? `${universityName} All Courses`
@@ -595,7 +630,7 @@ export default function CoursesAndFeesView({
           {admissionDates.length > 0 && (
             <section
               id="admission-dates"
-              className="content-block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-[100px]"
+              className="content-block scroll-mt-[100px]"
             >
               <div className="mb-[18px]">
                 <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] tracking-tight font-sans">
@@ -635,7 +670,7 @@ export default function CoursesAndFeesView({
           {learningRows.length > 0 && (
             <section
               id="learning-platform"
-              className="content-block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-[100px]"
+              className="content-block scroll-mt-[100px]"
             >
               <div className="mb-[18px]">
                 <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] tracking-tight font-sans">
@@ -696,7 +731,7 @@ export default function CoursesAndFeesView({
               id="student-reviews"
               className="content-block bg-white border-y border-[#e7eeff] scroll-mt-[100px]"
             >
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="w-full">
                 <div className="text-left mb-[18px]">
                   <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] tracking-tight font-sans">
                     {overview.reviewsMeta?.title ||
@@ -750,7 +785,7 @@ export default function CoursesAndFeesView({
           {faqs.length > 0 && (
             <section
               id="faqs"
-              className="content-block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-[100px]"
+              className="content-block scroll-mt-[100px]"
             >
               <div className="text-left mb-[18px]">
                 <h2 className="section-title text-xl sm:text-2xl font-bold text-[#000f22] tracking-tight font-sans">
@@ -841,7 +876,7 @@ export default function CoursesAndFeesView({
             id="counselor-helpline"
             className="content-block bg-[#0b2540] text-white scroll-mt-[130px]"
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
+            <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
               <div>
                 <h3 className="section-title text-lg sm:text-xl font-bold font-sans tracking-tight">
                   {coursesData.counselor?.title ||

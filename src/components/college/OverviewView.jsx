@@ -1,9 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { COURSES_DATA } from "@/data/coursesData";
 import { useSiteActions } from "@/components/shell/SiteActionsContext";
 import CollegeTableOfContents from "./CollegeTableOfContents";
 import { ProgrammeCardsSection } from "@/components/shared/ProgrammeCardsSection";
+import { CURRENT_YEAR } from "@/constants/years";
 
 import {
   CheckCircle,
@@ -39,22 +40,6 @@ const RecruiterScroll = ({ recruiters = [] }) => {
       </div>
     </div>;
 };
-const DEFAULT_TOC = [
-  { id: "latest-news", label: "1. Latest News & Updates" },
-  { id: "highlights", label: "2. Highlights 2026" },
-  { id: "courses-fees", label: "3. Courses and Fees 2026" },
-  { id: "popular-programmes", label: "4. Popular Programmes" },
-  { id: "eligibility-criteria", label: "5. Eligibility & Selection" },
-  { id: "admission-process", label: "6. Admission Process 2026" },
-  { id: "rankings", label: "7. Rankings & Accreditations" },
-  { id: "examination-pattern", label: "8. Examination Pattern" },
-  { id: "placements", label: "9. Placements" },
-  { id: "campus", label: "10. Campus" },
-  { id: "sample-degree", label: "11. Sample Degree" },
-  { id: "reviews-section", label: "12. Reviews & FAQs" },
-  { id: "compare-colleges", label: "13. Compare Colleges" },
-  { id: "blogs", label: "14. Blogs" }
-];
 const OverviewView = ({
   collegeData,
   onSelectCourse,
@@ -86,6 +71,7 @@ const OverviewView = ({
   const [tocOpen, setTocOpen] = useState(false);
   const [highlightsExpanded, setHighlightsExpanded] = useState(false);
   const [courseFeeSearch, setCourseFeeSearch] = useState("");
+  const [showAllFeeRows, setShowAllFeeRows] = useState(false);
   const [blogIndex, setBlogIndex] = useState(0);
   const [blogVisible, setBlogVisible] = useState(3);
   const [visibleAdmissionSteps, setVisibleAdmissionSteps] = useState([]);
@@ -110,7 +96,75 @@ const OverviewView = ({
   const ADMISSION_FLOW_STEPS = collegeData?.admission?.steps?.length ? collegeData.admission.steps : [];
   const HIGHLIGHT_CATEGORIES = collegeData?.highlights?.categories?.length ? collegeData.highlights.categories : ["All"];
   const REVIEW_CATEGORIES = ["All", ...(collegeData?.reviews?.map(r => r.course).filter(Boolean) ? [...new Set(collegeData.reviews.map(r => r.course).filter(Boolean))] : [])];
-  const TOC_ITEMS = collegeData?.toc?.length ? collegeData.toc : DEFAULT_TOC;
+  // Fee table rows of the "Courses and Fees" section. Only the first five
+  // degrees are shown; the rest stay collapsed behind the "Read more" button.
+  const FEE_ROWS_PREVIEW = 5;
+  const filteredFeeRows = (collegeData?.coursesFees?.table || []).filter((c) =>
+    String(c.degree || "").toLowerCase().includes(courseFeeSearch.toLowerCase())
+  );
+  const visibleFeeRows =
+    showAllFeeRows || courseFeeSearch
+      ? filteredFeeRows
+      : filteredFeeRows.slice(0, FEE_ROWS_PREVIEW);
+
+  // The table of contents comes from the CMS (`toc` of the page). When the
+  // CMS publishes none, the list is built from the sections this university
+  // actually renders — never from a fixed, another-university list.
+  const TOC_ITEMS = (() => {
+    if (collegeData?.toc?.length) return collegeData.toc;
+
+    const sections = [
+      ["latest-news", collegeData?.latestNews?.title],
+      ["highlights", collegeData?.highlights?.title],
+      ["courses-fees", collegeData?.coursesFees?.title],
+      ["popular-programmes", `${collegeData?.shortName || collegeData?.title || ""} Popular Programmes`.trim()],
+      ["eligibility-criteria", collegeData?.eligibility?.title],
+      ["admission-process", collegeData?.admission?.title],
+      ["rankings", collegeData?.rankings?.title],
+      ["examination-pattern", collegeData?.examinationPattern?.title],
+      ["placements", collegeData?.placements?.title],
+      ["campus", collegeData?.campus?.title],
+      ["sample-degree", collegeData?.sampleDegree?.title],
+      ["reviews-section", collegeData?.reviewsMeta?.title],
+      ["compare-colleges", collegeData?.compareSection?.title],
+      ["blogs", collegeData?.blogsMeta?.title],
+    ];
+
+    return sections
+      .filter(([, label]) => Boolean(label))
+      .map(([id, label], index) => ({ id, label, order: index }));
+  })();
+  // Review summary — every number comes from the API. A figure the CMS does
+  // not publish is not shown at all (no invented values).
+  const REVIEW_SUMMARY = (() => {
+    const reviews = collegeData?.reviews || [];
+    const scored = reviews
+      .map((review) => Number(review?.ratingValue))
+      .filter((value) => Number.isFinite(value) && value > 0);
+
+    const average = scored.length
+      ? scored.reduce((sum, value) => sum + value, 0) / scored.length
+      : 0;
+
+    const collegeRating = Number(collegeData?.rating);
+    const ratingValue = average || (Number.isFinite(collegeRating) ? collegeRating : 0);
+
+    const stats = [];
+
+    if (collegeData?.students != null && collegeData.students !== "") {
+      stats.push({
+        value: Number(collegeData.students).toLocaleString("en-IN"),
+        label: "Active Learners",
+        tone: "text-[#000f22]",
+      });
+    }
+
+    return {
+      rating: ratingValue ? `${ratingValue.toFixed(1)} / 5.0 Rating` : "",
+      count: reviews.length ? `${reviews.length} Verified Reviews` : "",
+      stats,
+    };
+  })();
   useEffect(() => {
     const stepNodes = Array.from(document.querySelectorAll(".admission-flow-step"));
     if (!stepNodes.length) return;
@@ -224,7 +278,9 @@ const OverviewView = ({
             <ChevronRight className="w-3.5 h-3.5 text-[#74777e]" />
             <span className="hover:text-[#115eaf] cursor-pointer">{collegeData?.title}</span>
             <ChevronRight className="w-3.5 h-3.5 text-[#74777e]" />
-            <span className="text-[#000f22] font-bold">Overview</span>
+            <span className="text-[#000f22] font-bold">
+              {collegeData?.shortTitle || "Overview"}
+            </span>
           </nav>
         </div>
       </div>
@@ -377,7 +433,7 @@ const OverviewView = ({
               <div className="flex items-center justify-between flex-wrap gap-3">
                 <div>
                   <span className="px-2.5 py-0.5 rounded bg-[#f0f3ff] text-[#115eaf] text-xs font-normal border border-[#d5e3ff]">
-                    Official Facts 2026
+                    Official Facts {CURRENT_YEAR}
                   </span>
                   <h2 className="text-xl sm:text-2xl font-bold text-[#000f22] font-sans mt-2">
                     {collegeData?.highlights?.title || `${collegeData?.shortName || collegeData?.title} Highlights`}
@@ -517,9 +573,7 @@ const OverviewView = ({
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#e7eeff]">
-                    {collegeData?.coursesFees?.table.filter(
-    (c) => c.degree.toLowerCase().includes(courseFeeSearch.toLowerCase())
-  ).map((c) => <tr key={c.degree} className="bg-white hover:bg-[#f9f9ff] transition-colors">
+                    {visibleFeeRows.map((c) => <tr key={c.degree} className="bg-white hover:bg-[#f9f9ff] transition-colors">
                           <td className="py-2 px-3 align-top">
                             <button
     onClick={() => {
@@ -535,9 +589,7 @@ const OverviewView = ({
                           <td className="py-2 px-3 text-[#43474d] font-normal align-top whitespace-nowrap">{c.duration}</td>
                           <td className="py-2 px-3 text-[#115eaf] font-normal align-top whitespace-nowrap">{c.avgFees}</td>
                         </tr>)}
-                    {collegeData?.coursesFees?.table.filter(
-    (c) => c.degree.toLowerCase().includes(courseFeeSearch.toLowerCase())
-  ).length === 0 && <tr className="bg-white">
+                    {filteredFeeRows.length === 0 && <tr className="bg-white">
                         <td colSpan={3} className="py-6 text-center text-xs text-[#74777e] font-normal">No programmes match your search.</td>
                       </tr>}
                   </tbody>
@@ -545,8 +597,29 @@ const OverviewView = ({
               </div>
 
               <p className="text-xs text-[#74777e] font-normal mt-[18px]">
-                {courseFeeSearch ? `Showing ${collegeData?.coursesFees?.table.filter((c) => c.degree.toLowerCase().includes(courseFeeSearch.toLowerCase())).length} out of ${collegeData?.coursesFees?.table.length} Degrees` : collegeData?.coursesFees?.showing}
+                {courseFeeSearch ? `Showing ${filteredFeeRows.length} out of ${collegeData?.coursesFees?.table.length} Degrees` : collegeData?.coursesFees?.showing}
               </p>
+
+              {
+    /* Read more — the remaining degrees stay collapsed until asked for */
+  }
+              {filteredFeeRows.length > FEE_ROWS_PREVIEW && !courseFeeSearch ? (
+                <button
+                  type="button"
+                  onClick={() => setShowAllFeeRows((value) => !value)}
+                  aria-expanded={showAllFeeRows}
+                  className="mt-3 px-4 py-2 rounded-lg bg-[#f0f3ff] border border-[#d5e3ff] text-[#115eaf] text-xs font-semibold hover:bg-[#e0ecff] transition-colors flex items-center gap-1.5 min-h-[44px]"
+                >
+                  <span>
+                    {showAllFeeRows
+                      ? "Show less"
+                      : `Read more (${filteredFeeRows.length - FEE_ROWS_PREVIEW} more degrees)`}
+                  </span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform ${showAllFeeRows ? "rotate-180" : ""}`}
+                  />
+                </button>
+              ) : null}
 
               {
     /* Actions */
@@ -1227,13 +1300,17 @@ const OverviewView = ({
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-[#e7eeff]">
                 <div>
                   <div className="flex items-center gap-2">
+                    {REVIEW_SUMMARY.rating && (
                     <span className="px-2.5 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-normal flex items-center gap-1">
                       <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-                      4.8 / 5.0 Rating
+                      {REVIEW_SUMMARY.rating}
                     </span>
+                    )}
+                    {REVIEW_SUMMARY.count && (
                     <span className="px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-normal">
-                      1,400+ Verified Submissions
+                      {REVIEW_SUMMARY.count}
                     </span>
+                    )}
                   </div>
                   <h2 className="section-title text-xl sm:text-2xl font-extrabold text-[#000f22] font-sans mt-2">
                     {collegeData?.reviewsMeta?.title || `${collegeData?.shortName || collegeData?.title} Reviews`}
@@ -1243,22 +1320,19 @@ const OverviewView = ({
                   </p>
                 </div>
 
+                {REVIEW_SUMMARY.stats.length > 0 && (
                 <div className="flex items-center gap-3 bg-[#f0f3ff] border border-[#d5e3ff] p-2.5 rounded-xl shrink-0">
-                  <div className="text-center">
-                    <span className="block text-lg font-black text-[#115eaf]">94%</span>
-                    <span className="text-[9px] text-[#43474d] font-bold">Completion Rate</span>
-                  </div>
-                  <div className="h-6 w-px bg-[#d5e3ff]" />
-                  <div className="text-center">
-                    <span className="block text-lg font-black text-[#000f22]">25,000+</span>
-                    <span className="text-[9px] text-[#43474d] font-bold">Active Learners</span>
-                  </div>
-                  <div className="h-6 w-px bg-[#d5e3ff]" />
-                  <div className="text-center">
-                    <span className="block text-lg font-black text-emerald-700">100%</span>
-                    <span className="text-[9px] text-[#43474d] font-bold">Verified Profiles</span>
-                  </div>
+                  {REVIEW_SUMMARY.stats.map((stat, index) => (
+                    <Fragment key={stat.label}>
+                      {index > 0 && <div className="h-6 w-px bg-[#d5e3ff]" />}
+                      <div className="text-center">
+                        <span className={`block text-lg font-black ${stat.tone}`}>{stat.value}</span>
+                        <span className="text-[9px] text-[#43474d] font-bold">{stat.label}</span>
+                      </div>
+                    </Fragment>
+                  ))}
                 </div>
+                )}
               </div>
 
               {
@@ -1375,7 +1449,7 @@ const OverviewView = ({
     onClick={() => onOpenApply()}
     className="px-5 py-2.5 bg-[#115eaf] text-white rounded-xl text-xs font-bold shadow hover:bg-[#004689] active:scale-95 transition-all"
   >
-                    Apply Now 2026
+                    Apply Now {CURRENT_YEAR}
                   </button>
                   <button
     onClick={() => onOpenHelpDesk()}

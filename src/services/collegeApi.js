@@ -53,8 +53,40 @@ export async function getCollegeBySlug(collegeName, sub) {
 }
 
 /**
+ * Same endpoint as `getCollegeBySlug`, but it never throws for a page the
+ * API does not publish: a 404 (the API answers `College not found` for an
+ * unknown slug *and* for an unknown `sub`) resolves to `null`.
+ *
+ * This is what makes "page not available" distinguishable from "the CMS is
+ * down" — a missing page must answer 404, a broken CMS must not silently
+ * render the Overview under a Courses URL.
+ */
+export async function fetchCollegePage(collegeName, sub) {
+  if (!collegeName) return null;
+
+  const subSlug = sub ? `?sub=${encodeURIComponent(sub)}` : "";
+
+  try {
+    const payload = await apiFetch(
+      `/website/colleges/${encodeURIComponent(collegeName)}${subSlug}`
+    );
+
+    return payload?.data?.data || payload?.data || payload || null;
+  } catch (error) {
+    if (/status 404/.test(error.message)) return null;
+
+    throw error;
+  }
+}
+
+/**
  * College navigation tabs.
  * GET {API_URL}/website/colleges/navbar-list/{collegeId}?isTest={isTest}
+ *
+ * The raw CMS entries are returned untouched (`navbarTitle`, `slug`, `order`)
+ * so the navigation layer can decide which pages exist and where they link
+ * to — the href is built there, not here, because the same college is served
+ * under both `/colleges/...` and `/universities/...`.
  */
 export async function getCollegeNavbarList(collegeId, isTest = false) {
   if (!collegeId) return [];
@@ -71,10 +103,9 @@ export async function getCollegeNavbarList(collegeId, isTest = false) {
     }
 
     return colleges.map((item) => ({
-      name: item.navbarTitle,
-      navbarTitle: item.navbarTitle,
-      slug: item.slug,
-      href: `/colleges/${item.slug}`,
+      title: item.navbarTitle || "",
+      slug: item.slug || "",
+      order: item.order ?? 0,
     }));
   } catch (error) {
     console.error(`getCollegeNavbarList failed for ${collegeId}:`, error.message);

@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from 'react';
 import { X, LogIn, Mail, Lock, Eye, EyeOff, Phone, ShieldCheck, CheckCircle, Sparkles, ArrowRight, GraduationCap, KeyRound, UserCheck } from 'lucide-react';
-export const LoginModal = ({ isOpen, onClose, onLoginSuccess, }) => {
+import { collegeNameOf } from '@/lib/collegeIdentity';
+export const LoginModal = ({ isOpen, onClose, onLoginSuccess, college = null }) => {
+    const collegeName = collegeNameOf(college);
     const [activeTab, setActiveTab] = useState('login');
     const [loginMethod, setLoginMethod] = useState('password');
     // Login fields
@@ -65,7 +67,7 @@ export const LoginModal = ({ isOpen, onClose, onLoginSuccess, }) => {
                 name: 'Aditya Shah',
                 email: emailOrPhone.includes('@') ? emailOrPhone : 'aditya.shah@degreefyd.com',
                 phone: !emailOrPhone.includes('@') ? emailOrPhone : '+91 98765 43210',
-                enrolledCourse: 'Online MBA - Lovely Professional University',
+                enrolledCourse: collegeName ? `Online MBA - ${collegeName}` : 'Online MBA',
                 applicationId: 'DEG-2026-89421',
             };
             setLoggedInUser(user);
@@ -89,7 +91,7 @@ export const LoginModal = ({ isOpen, onClose, onLoginSuccess, }) => {
                 name: 'Aditya Shah',
                 email: 'aditya.shah@degreefyd.com',
                 phone: emailOrPhone,
-                enrolledCourse: 'Online MBA - Lovely Professional University',
+                enrolledCourse: collegeName ? `Online MBA - ${collegeName}` : 'Online MBA',
                 applicationId: 'DEG-2026-89421',
             };
             setLoggedInUser(user);
@@ -132,7 +134,7 @@ export const LoginModal = ({ isOpen, onClose, onLoginSuccess, }) => {
                 name: 'Aditya Shah',
                 email: 'aditya.shah@degreefyd.com',
                 phone: '+91 98765 43210',
-                enrolledCourse: 'Online MBA - Lovely Professional University',
+                enrolledCourse: collegeName ? `Online MBA - ${collegeName}` : 'Online MBA',
                 applicationId: 'DEG-2026-89421',
             };
             setLoggedInUser(user);

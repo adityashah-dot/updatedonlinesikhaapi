@@ -7,15 +7,15 @@ export const revalidate = 300;
 export const metadata = {
   metadataBase: new URL("https://degreefyd.com"),
   title: {
-    default: "Online Siksha - LPU Online Degrees & Admissions Portal",
+    default: "Online Siksha - Online Degrees & Admissions Portal",
     template: "%s | Online Siksha",
   },
   description:
-    "Explore UGC-entitled LPU Online degree programs, semester tuition fees, scholarships, and direct admissions.",
+    "Explore UGC-entitled online degree programs, semester tuition fees, scholarships, and direct admissions.",
   openGraph: {
-    title: "Online Siksha - LPU Online Degrees & Admissions Portal",
+    title: "Online Siksha - Online Degrees & Admissions Portal",
     description:
-      "Explore UGC-entitled LPU Online degree programs, semester tuition fees, scholarships, and direct admissions.",
+      "Explore UGC-entitled online degree programs, semester tuition fees, scholarships, and direct admissions.",
     type: "website",
   },
   twitter: {

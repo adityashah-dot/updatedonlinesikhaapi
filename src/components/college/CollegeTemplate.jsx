@@ -1,49 +1,61 @@
 "use client";
 
+import { useEffect } from "react";
 import CollegeNavbar from "./CollegeNavbar";
 import OverviewView from "./OverviewView";
 import CollegeCourses from "./CollegeCourses";
 import CollegeAdmission from "./CollegeAdmission";
 import CollegeScholarships from "./CollegeScholarships";
+import { useSiteActions } from "@/components/shell/SiteActionsContext";
 
 /**
- * Normalises the `[...slug]` segments into the section that must render.
- * The first segment is always the college slug, the second (when present)
- * is the API "sub" navigation segment.
+ * College template.
+ *
+ * The section is resolved by the loader from the API payload (`shortTitle` /
+ * `navbarTitle`), never guessed from the URL text:
+ *
+ *   overview      → OverviewView
+ *   courses       → CollegeCourses
+ *   admission     → CollegeAdmission
+ *   scholarships  → CollegeScholarships
+ *   page          → any other CMS page the API publishes (placements,
+ *                   hostel & campus, infrastructure, …) rendered with the
+ *                   generic section template and its own API content.
  */
-function resolveSection(sub) {
-  const value = String(sub || "").toLowerCase().trim();
-
-  if (!value) return "overview";
-  if (value.includes("course")) return "courses";
-  if (value.includes("admission")) return "admission";
-  if (value.includes("scholar")) return "scholarships";
-  if (value.includes("lms")) return "lms";
-
-  return "overview";
-}
-
 export default function CollegeTemplate({
   data,
+  nav,
   tabs = [],
   overview,
-  sub = "",
+  section = "overview",
   slug = "",
-  section: sectionParam = "",
 }) {
   const college = data || {};
-  const section = sectionParam
-    ? resolveSection(sectionParam)
-    : resolveSection(sub);
-  const collegeSlug = slug || college.slug || "";
+  const siteActions = useSiteActions();
+  const setActiveCollege = siteActions.setActiveCollege;
+
+  // The modals (Apply / Brochure / LMS / Help desk) must show the university
+  // of the page the visitor is on — never a hardcoded one.
+  const activeCollege = {
+    id: college.college?.id || "",
+    name: college.college?.name || college.title || "",
+    shortName: college.college?.shortName || college.subtitle || "",
+    slug: slug || college.college?.slug || college.slug || "",
+  };
+
+  useEffect(() => {
+    if (!setActiveCollege) return;
+
+    setActiveCollege(activeCollege);
+
+    return () => setActiveCollege(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeCollege.id, activeCollege.slug, setActiveCollege]);
 
   const universityNavigation = (
     <CollegeNavbar
-      college={college}
+      nav={nav}
       tabs={tabs}
-      sections={[]}
-      activeTab={college.navbarTitle}
-      slug={collegeSlug}
       activeSection={section}
     />
   );

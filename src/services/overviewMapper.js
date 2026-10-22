@@ -482,6 +482,9 @@ export function mapOverviewData(payload, extras = {}) {
   const result = {
     slug: rawPayload.slug || college.slug || "",
     title: rawPayload.title || hero.title || college.name || "",
+    // The type of the CMS page ("Overview", "Courses", "Admission",
+    // "Scholarship", …) — used for the breadcrumb and the page template.
+    shortTitle: rawPayload.shortTitle || "",
     shortName: college.collegeShortName || hero.subtitle || "",
     name: college.name || rawPayload.title || "",
     location: college.location || "",

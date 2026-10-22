@@ -7,6 +7,7 @@ export default function UniversitiesClient({
   universities = [],
   pagination = null,
   page = 1,
+  search = "",
   blogs = [],
   error = "",
 }) {
@@ -17,6 +18,7 @@ export default function UniversitiesClient({
       universities={universities}
       pagination={pagination}
       page={page}
+      search={search}
       blogs={blogs}
       error={error}
       onOpenApply={() => siteActions.onOpenApply()}

@@ -10,13 +10,15 @@ import {
 
 export const revalidate = 3600;
 
+const BASE_PATH = "/universities";
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const pageData = await loadCollegePage(slug);
+  const pageData = await loadCollegePage(slug, { basePath: BASE_PATH });
 
   const college = pageData?.college;
 
-  if (!college) {
+  if (!college || pageData?.unavailable) {
     notFound();
   }
 
@@ -26,7 +28,7 @@ export async function generateMetadata({ params }) {
       toPlainText(college?.overview) ||
       "Explore online degree programs, fees, admissions and scholarships.",
     alternates: {
-      canonical: `/universities/${splitSlug(slug).fullSlug}`,
+      canonical: `${BASE_PATH}/${splitSlug(slug).fullSlug}`,
     },
   };
 }
@@ -38,24 +40,27 @@ export default async function UniversityPage({ params, searchParams }) {
   const legacy = resolveLegacySlug(slug);
 
   if (legacy) {
-    permanentRedirect(`/universities${legacy.path}`);
+    permanentRedirect(`${BASE_PATH}${legacy.path}`);
   }
 
   const { collegeName, sub } = withSection(slug, section);
 
-  const pageData = await loadCollegePage(sub ? [collegeName, sub] : slug);
+  const pageData = await loadCollegePage(sub ? [collegeName, sub] : slug, {
+    basePath: BASE_PATH,
+  });
 
-  if (!pageData) {
+  // The college does not exist, or the API does not publish this page.
+  if (!pageData || pageData.unavailable) {
     notFound();
   }
 
   return (
     <CollegeTemplate
       data={pageData.college}
-      tabs={pageData.tabs}
+      nav={pageData.nav}
       overview={pageData.overview}
+      section={pageData.section}
       sub={pageData.sub}
-      section={section}
       slug={pageData.collegeSlug}
     />
   );

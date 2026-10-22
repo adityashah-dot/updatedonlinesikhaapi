@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from 'react';
 import { X, Video, BookOpen, Smartphone, Award, Calendar, Clock, CheckCircle, ExternalLink, Play } from 'lucide-react';
-export const LmsPortalModal = ({ isOpen, onClose, onOpenApply }) => {
+import { collegeNameOf } from '@/lib/collegeIdentity';
+export const LmsPortalModal = ({ isOpen, onClose, onOpenApply, college = null }) => {
     const [activeTab, setActiveTab] = useState('vault');
     const [playingVideo, setPlayingVideo] = useState(null);
+    const collegeName = collegeNameOf(college);
     if (!isOpen)
         return null;
     return (<div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs animate-in fade-in duration-200">
@@ -16,7 +18,7 @@ export const LmsPortalModal = ({ isOpen, onClose, onOpenApply }) => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-base font-bold font-sans">LPU e-Connect Portal Preview</h3>
+                <h3 className="text-base font-bold font-sans">{collegeName ? `${collegeName} Learning Portal Preview` : 'Learning Management System Portal Preview'}</h3>
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                   Live LMS Simulation
                 </span>
@@ -120,7 +122,7 @@ export const LmsPortalModal = ({ isOpen, onClose, onOpenApply }) => {
                           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                         </div>
                         <p className="text-[11px] text-[#b1c8eb]">
-                          Streaming authenticated student session via encrypted LPU CDN. High-bitrate audio with real-time speech-to-text.
+                          Streaming authenticated student session via encrypted{collegeName ? ` ${collegeName}` : ''} CDN. High-bitrate audio with real-time speech-to-text.
                         </p>
                       </div>)}
                   </div>))}

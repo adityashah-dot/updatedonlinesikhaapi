@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -178,7 +178,7 @@ const specIconByLabel = {
     Specialization: Fuel,
     'Alumni Status': Trophy,
 };
-export const UniversitiesView = ({ universities = [], pagination = null, page = 1, blogs = [], error = '', onOpenApply, onOpenHelpDesk, onOpenBrochure, }) => {
+export const UniversitiesView = ({ universities = [], pagination = null, page = 1, search = '', blogs = [], error = '', onOpenApply, onOpenHelpDesk, onOpenBrochure, }) => {
     const router = useRouter();
     const isDesktop = useMediaQuery('(min-width: 768px)');
     const [view, setView] = useState('list');
@@ -191,6 +191,25 @@ export const UniversitiesView = ({ universities = [], pagination = null, page = 
     const [paymentChecked, setPaymentChecked] = useState([true, true]);
     const [filtersOpen, setFiltersOpen] = useState(false);
     const [quickChips, setQuickChips] = useState([]);
+    const [searchInput, setSearchInput] = useState(search);
+    // Keep the field in sync with the query string (back/forward navigation).
+    useEffect(() => {
+        setSearchInput(search);
+    }, [search]);
+    // Runs the search against the live listing API (GET /website/colleges/listing
+    // with `search`) and resets the pagination to the first page.
+    const runSearch = () => {
+        const query = searchInput.trim();
+        router.push(query ? `/universities?search=${encodeURIComponent(query)}` : '/universities');
+    };
+    // Keeps the active search in every pagination link.
+    const pageHref = (number) => {
+        const params = new URLSearchParams();
+        if (search) params.set('search', search);
+        if (number > 1) params.set('page', String(number));
+        const query = params.toString();
+        return query ? `/universities?${query}` : '/universities';
+    };
     const toggleQuickChip = (chip) => {
         setQuickChips((prev) => prev.includes(chip) ? prev.filter((c) => c !== chip) : [...prev, chip]);
     };
@@ -351,7 +370,12 @@ export const UniversitiesView = ({ universities = [], pagination = null, page = 
             <div className="uv-search-fields grid grid-cols-1 md:grid-cols-12 gap-3">
               <div className="md:col-span-6 relative flex items-center">
                 <Search className="absolute left-3.5 text-[#115eaf] w-5 h-5"/>
-                <input type="text" placeholder="Search university or degree" className="uv-field w-full pl-10 pr-4 py-3 min-h-[48px] bg-[#f9f9ff] rounded-xl border border-[#c4c6ce] text-[#000f22] placeholder:text-[#74777e] text-base sm:text-sm focus:outline-none focus:border-[#115eaf] focus:ring-2 focus:ring-[#115eaf]/20 transition-all font-normal"/>
+                <input type="search" name="search" aria-label="Search university or degree" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    runSearch();
+                  }
+                }} placeholder="Search university or degree" className="uv-field w-full pl-10 pr-4 py-3 min-h-[48px] bg-[#f9f9ff] rounded-xl border border-[#c4c6ce] text-[#000f22] placeholder:text-[#74777e] text-base sm:text-sm focus:outline-none focus:border-[#115eaf] focus:ring-2 focus:ring-[#115eaf]/20 transition-all font-normal"/>
               </div>
 
               <div className="md:col-span-4 relative flex items-center">
@@ -372,7 +396,7 @@ export const UniversitiesView = ({ universities = [], pagination = null, page = 
               </div>
 
               <div className="md:col-span-2 mt-[2px] md:mt-0">
-                <button className="uv-find-btn w-full h-full min-h-[48px] py-3 px-4 bg-[#115eaf] hover:bg-[#004689] text-white text-sm font-semibold rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all">
+                <button type="button" onClick={runSearch} className="uv-find-btn w-full h-full min-h-[48px] py-3 px-4 bg-[#115eaf] hover:bg-[#004689] text-white text-sm font-semibold rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all">
                   <span>Find Universities</span>
                   <ArrowRight className="w-4 h-4"/>
                 </button>
@@ -519,12 +543,19 @@ export const UniversitiesView = ({ universities = [], pagination = null, page = 
             {/* University cards */}
             {(!universities || !universities.length) ? (<div className="bg-white rounded-2xl border border-[#d5e3ff] p-8 text-center">
               <p className="text-sm font-semibold text-[#000f22]">
-                {error ? 'University list unavailable' : 'No universities found'}
+                {error ? 'University list unavailable' : search ? `No universities found for "${search}"` : 'No universities found'}
               </p>
               <p className="text-[13px] text-[#43474d] font-normal mt-1">
-                {error || 'The live university list is empty right now. Please try again shortly.'}
+                {error || (search ? 'Try a different university name, city or keyword.' : 'The live university list is empty right now. Please try again shortly.')}
               </p>
             </div>) : null}
+            {search && (universities || []).length > 0 && (
+            <p className="text-[13px] font-normal text-[#43474d]">
+              {pagination?.total || universities.length} universities matching
+              {" "}
+              <span className="font-semibold text-[#000f22]">"{search}"</span>
+            </p>
+            )}
             <div className={view === 'grid'
             ? 'grid grid-cols-1 md:grid-cols-2 gap-5 transition-all duration-300'
             : 'space-y-5'}>
@@ -744,18 +775,18 @@ export const UniversitiesView = ({ universities = [], pagination = null, page = 
 
             {/* Pagination */}
             <div className="flex items-center justify-between pt-6 border-t border-[#e7eeff]">
-              <Link href={`/universities?page=${Math.max(1, page - 1)}`} aria-label="Previous page" className={`px-2 sm:px-4 py-2 rounded-lg bg-white border border-[#d5e3ff] text-[#43474d] hover:text-[#000f22] text-xs font-medium flex items-center justify-center gap-1 transition-colors min-h-[44px] min-w-[44px] shrink-0 ${page <= 1 ? 'opacity-40 pointer-events-none' : ''}`}>
+              <Link href={pageHref(Math.max(1, page - 1))} aria-label="Previous page" className={`px-2 sm:px-4 py-2 rounded-lg bg-white border border-[#d5e3ff] text-[#43474d] hover:text-[#000f22] text-xs font-medium flex items-center justify-center gap-1 transition-colors min-h-[44px] min-w-[44px] shrink-0 ${page <= 1 ? 'opacity-40 pointer-events-none' : ''}`}>
                 <ChevronLeft className="w-4 h-4"/>
                 <span className="hidden sm:inline">Previous</span>
               </Link>
               <div className="flex items-center gap-0.5 sm:gap-1 mx-1 sm:mx-2">
-                {paginationNumbers.map((number, index) => number === '...' ? (<span key={`gap-${index}`} className="hidden sm:inline px-1 sm:px-2 text-[#74777e]">...</span>) : (<Link key={number} href={`/universities?page=${number}`} aria-current={number === page ? 'page' : undefined} className={`w-11 h-11 md:w-9 md:h-9 shrink-0 rounded-lg text-xs font-semibold flex items-center justify-center ${number === page
+                {paginationNumbers.map((number, index) => number === '...' ? (<span key={`gap-${index}`} className="hidden sm:inline px-1 sm:px-2 text-[#74777e]">...</span>) : (<Link key={number} href={pageHref(number)} aria-current={number === page ? 'page' : undefined} className={`w-11 h-11 md:w-9 md:h-9 shrink-0 rounded-lg text-xs font-semibold flex items-center justify-center ${number === page
             ? 'bg-[#115eaf] text-white'
             : 'hover:bg-[#f0f3ff] text-[#000f22] font-medium'}`}>
                   {number}
                 </Link>))}
               </div>
-              <Link href={`/universities?page=${page + 1}`} aria-label="Next page" className={`px-2 sm:px-4 py-2 rounded-lg bg-white border border-[#d5e3ff] text-[#115eaf] text-xs font-medium flex items-center justify-center gap-1 hover:bg-[#f0f3ff] transition-colors min-h-[44px] min-w-[44px] shrink-0 ${page >= totalPages ? 'opacity-40 pointer-events-none' : ''}`}>
+              <Link href={pageHref(page + 1)} aria-label="Next page" className={`px-2 sm:px-4 py-2 rounded-lg bg-white border border-[#d5e3ff] text-[#115eaf] text-xs font-medium flex items-center justify-center gap-1 hover:bg-[#f0f3ff] transition-colors min-h-[44px] min-w-[44px] shrink-0 ${page >= totalPages ? 'opacity-40 pointer-events-none' : ''}`}>
                 <span className="hidden sm:inline">Next</span>
                 <ChevronRight className="w-4 h-4"/>
               </Link>

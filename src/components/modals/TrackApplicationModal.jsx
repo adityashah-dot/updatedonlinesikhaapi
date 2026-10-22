@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from 'react';
 import { X, Search, Clock } from 'lucide-react';
-export const TrackApplicationModal = ({ isOpen, onClose }) => {
+import { CURRENT_YEAR } from '@/constants/years';
+import { collegeCodeOf } from '@/lib/collegeIdentity';
+export const TrackApplicationModal = ({ isOpen, onClose, college = null }) => {
     const [applicationId, setApplicationId] = useState('');
     const [searched, setSearched] = useState(false);
+    const collegeCode = collegeCodeOf(college);
     if (!isOpen)
         return null;
     const handleSubmit = (e) => {
@@ -36,7 +39,7 @@ export const TrackApplicationModal = ({ isOpen, onClose }) => {
           {!searched ? (<form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-[#000f22] mb-1.5">Application ID</label>
-                <input type="text" value={applicationId} onChange={(e) => setApplicationId(e.target.value)} placeholder="e.g. LPU-2026-00123" className="w-full px-4 py-2.5 rounded-xl border border-[#d5e3ff] text-base sm:text-sm focus:ring-2 focus:ring-slate-900 focus:border-slate-900 outline-none transition-all" required/>
+                <input type="text" value={applicationId} onChange={(e) => setApplicationId(e.target.value)} placeholder={`e.g. ${collegeCode}-${CURRENT_YEAR}-00123`} className="w-full px-4 py-2.5 rounded-xl border border-[#d5e3ff] text-base sm:text-sm focus:ring-2 focus:ring-slate-900 focus:border-slate-900 outline-none transition-all" required/>
               </div>
               <button type="submit" className="w-full py-3 bg-slate-900 text-white rounded-xl text-sm font-bold hover:bg-slate-800 active:scale-[0.98] transition-all shadow">
                 Track Application

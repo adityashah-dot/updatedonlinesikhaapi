@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import { COURSES_DATA } from '@/data/coursesData';
 import { X, Download, FileText, CheckCircle, ShieldCheck } from 'lucide-react';
-export const BrochureModal = ({ isOpen, onClose, selectedCourse }) => {
+import { CURRENT_YEAR } from '@/constants/years';
+import { collegeSlugOf } from '@/lib/collegeIdentity';
+export const BrochureModal = ({ isOpen, onClose, selectedCourse, college = null }) => {
     const [courseId, setCourseId] = useState(selectedCourse ? selectedCourse.id : 'all');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -18,7 +20,7 @@ export const BrochureModal = ({ isOpen, onClose, selectedCourse }) => {
         const link = document.createElement('a');
         link.href = officialBrochureUrl;
         link.target = '_blank';
-        link.download = currentCourse ? currentCourse.brochurePdfName : 'LPU_Online_Complete_Brochure_2026.pdf';
+        link.download = currentCourse ? currentCourse.brochurePdfName : `${collegeSlugOf(college)}_Complete_Brochure_${CURRENT_YEAR}.pdf`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
