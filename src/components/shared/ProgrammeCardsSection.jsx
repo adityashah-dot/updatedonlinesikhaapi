@@ -61,10 +61,10 @@ export const ProgrammeCardsSection = ({ sectionId, title, description, programme
                   Specialisations
                 </h4>
                 <div className="flex flex-wrap gap-1">
-                  {visibleSpecs.map((s) => (<span key={s} className="px-1.5 py-0.5 border border-[#d5e3ff] rounded-[5px] bg-[#f0f3ff] text-[#43474d] text-[10px] leading-tight font-normal">
+                  {visibleSpecs.map((s, index) => (<span key={`${p.id}-${s}-${index}`} className="px-1.5 py-0.5 border border-[#d5e3ff] rounded-[5px] bg-[#f0f3ff] text-[#43474d] text-[10px] leading-tight font-normal">
                       {s}
                     </span>))}
-                  {extraCount > 0 && (<span className="px-1.5 py-0.5 border border-[#d5e3ff] rounded-[5px] bg-white text-[#115eaf] text-[10px] leading-tight font-semibold">
+                  {extraCount > 0 && (<span key={`${p.id}-extra`} className="px-1.5 py-0.5 border border-[#d5e3ff] rounded-[5px] bg-white text-[#115eaf] text-[10px] leading-tight font-semibold">
                       +{extraCount}
                     </span>)}
                 </div>
