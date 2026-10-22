@@ -1,0 +1,2901 @@
+
+> degreefyd-new@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.39:3000
+- Environments: .env.local
+✓ Ready in 1048ms
+✓ Running next.config.mjs took 46ms
+
+ GET / 200 in 857ms (next.js: 433ms, application-code: 425ms)
+ GET /universities 200 in 135ms (next.js: 10ms, application-code: 125ms)
+ GET /universities/upes-online 200 in 954ms (next.js: 627ms, application-code: 327ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+ GET /universities/upes-online/courses 200 in 375ms (next.js: 9ms, application-code: 366ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /universities/upes-online/admission 200 in 228ms (next.js: 1.8ms, application-code: 226ms)
+ GET /universities/lovely-professional-university-online 200 in 267ms (next.js: 11ms, application-code: 256ms)
+ GET /universities/lovely-professional-university-online/courses 200 in 178ms (next.js: 2ms, application-code: 176ms)
+ GET /universities/lovely-professional-university-online/admission 200 in 214ms (next.js: 13ms, application-code: 201ms)
+ GET /colleges/upes-online 200 in 903ms (next.js: 730ms, application-code: 173ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+ GET /colleges/upes-online/courses 200 in 253ms (next.js: 10ms, application-code: 243ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /colleges/upes-online/admission 200 in 227ms (next.js: 1.9ms, application-code: 225ms)
+ GET /colleges/lovely-professional-university-online 200 in 195ms (next.js: 1.9ms, application-code: 193ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 145ms (next.js: 9ms, application-code: 136ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 164ms (next.js: 1.4ms, application-code: 163ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 184ms (next.js: 11ms, application-code: 174ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 200 in 181ms (next.js: 10ms, application-code: 171ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 200 in 261ms (next.js: 8ms, application-code: 253ms)
+✓ Compiled in 243ms
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 404 in 237ms (next.js: 22ms, application-code: 215ms)
+✓ Compiled in 36ms
+✓ Compiled in 82ms
+✓ Compiled in 33ms
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 200 in 182ms (next.js: 9ms, application-code: 173ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 179ms (next.js: 10ms, application-code: 169ms)
+ GET /colleges/upes-online 200 in 167ms (next.js: 1.7ms, application-code: 165ms)
+ GET /universities/upes-online 200 in 150ms (next.js: 1.5ms, application-code: 148ms)
+✓ Compiled in 156ms
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 200 in 247ms (next.js: 19ms, application-code: 229ms)
+✓ Compiled in 171ms
+ GET / 200 in 169ms (next.js: 1.2ms, application-code: 168ms)
+ GET /universities 200 in 109ms (next.js: 1.0ms, application-code: 108ms)
+ GET /universities/upes-online 200 in 183ms (next.js: 10ms, application-code: 173ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+ GET /universities/upes-online/courses 200 in 247ms (next.js: 1.8ms, application-code: 245ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /universities/upes-online/admission 200 in 217ms (next.js: 8ms, application-code: 209ms)
+ GET /universities/lovely-professional-university-online 200 in 185ms (next.js: 1.1ms, application-code: 184ms)
+ GET /universities/lovely-professional-university-online/courses 200 in 136ms (next.js: 8ms, application-code: 129ms)
+ GET /universities/lovely-professional-university-online/admission 200 in 149ms (next.js: 1.5ms, application-code: 147ms)
+ GET /colleges/upes-online 200 in 199ms (next.js: 9ms, application-code: 190ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+ GET /colleges/upes-online/courses 200 in 182ms (next.js: 1.2ms, application-code: 180ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /colleges/upes-online/admission 200 in 193ms (next.js: 8ms, application-code: 186ms)
+ GET /colleges/lovely-professional-university-online 200 in 223ms (next.js: 1.1ms, application-code: 221ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 161ms (next.js: 8ms, application-code: 153ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 139ms (next.js: 1.1ms, application-code: 138ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 181ms (next.js: 10ms, application-code: 170ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 404 in 211ms (next.js: 10ms, application-code: 201ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 125ms (next.js: 7ms, application-code: 118ms)
+ GET /universities 200 in 115ms (next.js: 0.9ms, application-code: 114ms)
+ GET /universities/lovely-professional-university-online 200 in 276ms (next.js: 9ms, application-code: 266ms)
+ GET /colleges/lovely-professional-university-online 200 in 316ms (next.js: 11ms, application-code: 305ms)
+ GET /universities/chandigarh-university-online 200 in 432ms (next.js: 13ms, application-code: 418ms)
+ GET /colleges/chandigarh-university-online 200 in 291ms (next.js: 12ms, application-code: 278ms)
+ GET /universities/amity-university-online 200 in 424ms (next.js: 11ms, application-code: 413ms)
+ GET /colleges/amity-university-online 200 in 261ms (next.js: 9ms, application-code: 252ms)
+ GET /universities/manipal-university-online 200 in 504ms (next.js: 13ms, application-code: 491ms)
+ GET /colleges/manipal-university-online 200 in 265ms (next.js: 13ms, application-code: 252ms)
+ GET /universities/jain-university-online 200 in 473ms (next.js: 12ms, application-code: 460ms)
+ GET /colleges/jain-university-online 200 in 252ms (next.js: 13ms, application-code: 238ms)
+ GET /universities/upes-online 200 in 284ms (next.js: 11ms, application-code: 273ms)
+ GET /colleges/upes-online 200 in 292ms (next.js: 10ms, application-code: 282ms)
+ GET /universities/upes-online 200 in 171ms (next.js: 8ms, application-code: 163ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 404 in 332ms (next.js: 14ms, application-code: 318ms)
+ GET /universities/lpu-online 200 in 181ms (next.js: 2ms, application-code: 179ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 404 in 745ms (next.js: 3ms, application-code: 742ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 404 in 184ms (next.js: 11ms, application-code: 173ms)
+ GET /universities 200 in 51ms (next.js: 7ms, application-code: 43ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /universities/chandigarh-university-online 200 in 95ms (next.js: 23ms, application-code: 72ms)
+[browser] ./src/components/college/OverviewView.jsx:1777:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  1775 |       </div>
+  1776 |     </div>;
+> 1777 | };
+       | ^
+  1778 | export {
+  1779 |   OverviewView
+  1780 | };
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/OverviewView.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/OverviewView.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/OverviewView.jsx:1777:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  1775 |       </div>
+  1776 |     </div>;
+> 1777 | };
+       | ^
+  1778 | export {
+  1779 |   OverviewView
+  1780 | };
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/OverviewView.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/OverviewView.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+✓ Compiled in 96ms
+ GET /universities/chandigarh-university-online 200 in 96ms (next.js: 12ms, application-code: 84ms)
+✓ Compiled in 81ms
+⨯ TypeError: Cannot read properties of undefined (reading 'length')
+    at mapOverviewData (src\services\overviewMapper.js:594:30)
+    at loadCollegePage (src\services\collegePageLoader.js:113:35)
+    at async UniversityPage (src\app\universities\[...slug]\page.jsx:31:20)
+  592 |   if (result.compareSection) renderedSections.add("compare-colleges");
+  593 |   if (result.blogs.length) renderedSections.add("blogs");
+> 594 |   if (result.relatedColleges.length) renderedSections.add("related-colleges");
+      |                              ^
+  595 |
+  596 |   result.toc = result.toc.filter((item) => renderedSections.has(item.id));
+  597 | {
+  digest: '4013514311'
+}
+⨯ TypeError: Cannot read properties of undefined (reading 'length')
+    at mapOverviewData (src\services\overviewMapper.js:594:30)
+    at loadCollegePage (src\services\collegePageLoader.js:113:35)
+    at async Module.generateMetadata (src\app\universities\[...slug]\page.jsx:9:20)
+  592 |   if (result.compareSection) renderedSections.add("compare-colleges");
+  593 |   if (result.blogs.length) renderedSections.add("blogs");
+> 594 |   if (result.relatedColleges.length) renderedSections.add("related-colleges");
+      |                              ^
+  595 |
+  596 |   result.toc = result.toc.filter((item) => renderedSections.has(item.id));
+  597 | {
+  digest: '3376778254'
+}
+ GET /universities/chandigarh-university-online 200 in 87ms (next.js: 9ms, application-code: 78ms)
+✓ Compiled in 38ms
+ GET /universities/chandigarh-university-online 200 in 228ms (next.js: 10ms, application-code: 218ms)
+✓ Compiled in 95ms
+⨯ ReferenceError: getSimilarColleges is not defined
+    at loadCollegePage (src\services\collegePageLoader.js:107:25)
+    at async UniversityPage (src\app\universities\[...slug]\page.jsx:31:20)
+  105 |     getCollegeCourses(collegeId),
+  106 |     getCollegeGallery(collegeId),
+> 107 |     getCollegeRecruiters(collegeId),
+      |                         ^
+  108 |     getSimilarColleges(collegeSlug),
+  109 |     getCollegeBlogs(collegeId),
+  110 |   ]); {
+  digest: '3940205112'
+}
+⨯ ReferenceError: getSimilarColleges is not defined
+    at loadCollegePage (src\services\collegePageLoader.js:107:25)
+    at async Module.generateMetadata (src\app\universities\[...slug]\page.jsx:9:20)
+  105 |     getCollegeCourses(collegeId),
+  106 |     getCollegeGallery(collegeId),
+> 107 |     getCollegeRecruiters(collegeId),
+      |                         ^
+  108 |     getSimilarColleges(collegeSlug),
+  109 |     getCollegeBlogs(collegeId),
+  110 |   ]); {
+  digest: '1312088753'
+}
+ GET /universities/chandigarh-university-online 200 in 58ms (next.js: 9ms, application-code: 49ms)
+✓ Compiled in 63ms
+ GET /universities/chandigarh-university-online 200 in 280ms (next.js: 9ms, application-code: 271ms)
+ GET / 200 in 31ms (next.js: 2ms, application-code: 29ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /universities 200 in 37ms (next.js: 2ms, application-code: 35ms)
+ GET /universities/lovely-professional-university-online 200 in 93ms (next.js: 20ms, application-code: 72ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 89ms (next.js: 15ms, application-code: 73ms)
+ GET /colleges/upes-online 200 in 205ms (next.js: 11ms, application-code: 193ms)
+ GET /colleges/lovely-professional-university-online 200 in 245ms (next.js: 1.4ms, application-code: 243ms)
+ GET /universities/upes-online 200 in 211ms (next.js: 14ms, application-code: 196ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 220ms (next.js: 14ms, application-code: 206ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 404 in 234ms (next.js: 9ms, application-code: 225ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /colleges/lpu-online 404 in 246ms (next.js: 12ms, application-code: 234ms)
+Sub page "lms" is not served by the API for lovely-professional-university-online/lms; falling back to the base college payload.
+Sub page "lms" is not served by the API for lovely-professional-university-online/lms; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/lms 200 in 421ms (next.js: 1.3ms, application-code: 419ms)
+Sub page "lms" is not served by the API for lovely-professional-university-online/lms; falling back to the base college payload.
+Sub page "lms" is not served by the API for lovely-professional-university-online/lms; falling back to the base college payload.
+ GET /universities/lovely-professional-university-online/lms 200 in 278ms (next.js: 9ms, application-code: 269ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 312ms (next.js: 11ms, application-code: 301ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /universities/lovely-professional-university-online/scholarships 200 in 263ms (next.js: 11ms, application-code: 252ms)
+Sub page "overview" is not served by the API for lovely-professional-university-online/overview; falling back to the base college payload.
+Sub page "overview" is not served by the API for lovely-professional-university-online/overview; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/overview 200 in 365ms (next.js: 12ms, application-code: 353ms)
+ GET /colleges/lovely-professional-university-online 200 in 427ms (next.js: 13ms, application-code: 414ms)
+✓ Compiled in 157ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 116ms (next.js: 20ms, application-code: 96ms)
+✓ Compiled in 95ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 131ms (next.js: 18ms, application-code: 112ms)
+✓ Compiled in 156ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 174ms (next.js: 32ms, application-code: 142ms)
+✓ Compiled in 87ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 93ms (next.js: 14ms, application-code: 80ms)
+✓ Compiled in 65ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 103ms (next.js: 7ms, application-code: 96ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 282ms (next.js: 10ms, application-code: 271ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /colleges/lpu-online 308 in 297ms (next.js: 12ms, application-code: 285ms)
+College fetch failed for cu-online: Request failed with status 404 for /website/colleges/cu-online
+College fetch failed for cu-online: Request failed with status 404 for /website/colleges/cu-online
+ GET /universities/cu-online 308 in 279ms (next.js: 3ms, application-code: 276ms)
+ GET /colleges/lovely-professional-university-online 200 in 305ms (next.js: 30ms, application-code: 275ms)
+ GET /universities/lovely-professional-university-online 200 in 331ms (next.js: 17ms, application-code: 314ms)
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online/courses 308 in 428ms (next.js: 1.8ms, application-code: 426ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 243ms (next.js: 14ms, application-code: 229ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /colleges/lpu-online 308 in 309ms (next.js: 13ms, application-code: 296ms)
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online/courses 308 in 399ms (next.js: 2ms, application-code: 396ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 376ms (next.js: 8ms, application-code: 368ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 217ms (next.js: 9ms, application-code: 208ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 286ms (next.js: 9ms, application-code: 277ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /colleges/lpu-online 308 in 348ms (next.js: 12ms, application-code: 336ms)
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online/courses 308 in 388ms (next.js: 2ms, application-code: 385ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 301ms (next.js: 9ms, application-code: 291ms)
+ GET /universities/lovely-professional-university-online 200 in 229ms (next.js: 1.3ms, application-code: 228ms)
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for lpu-online/courses; falling back to the base college payload.
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online/courses: Request failed with status 404 for /website/colleges/lpu-online
+ GET /colleges/lpu-online/courses 308 in 382ms (next.js: 11ms, application-code: 371ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 142ms (next.js: 1.6ms, application-code: 140ms)
+ GET /colleges/lovely-professional-university-online 200 in 245ms (next.js: 11ms, application-code: 234ms)
+✓ Compiled in 98ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 107ms (next.js: 10ms, application-code: 98ms)
+✓ Compiled in 144ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 126ms (next.js: 12ms, application-code: 114ms)
+ GET /colleges/lovely-professional-university-online 200 in 201ms (next.js: 10ms, application-code: 191ms)
+ GET /colleges/lovely-professional-university-online 200 in 214ms (next.js: 8ms, application-code: 206ms)
+ GET /colleges/lovely-professional-university-online 200 in 223ms (next.js: 7ms, application-code: 216ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 154ms (next.js: 2ms, application-code: 152ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 168ms (next.js: 9ms, application-code: 159ms)
+ GET /colleges/upes-online 200 in 247ms (next.js: 2ms, application-code: 245ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 192ms (next.js: 8ms, application-code: 183ms)
+✓ Compiled in 115ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 108ms (next.js: 14ms, application-code: 94ms)
+✓ Compiled in 89ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 101ms (next.js: 17ms, application-code: 84ms)
+ GET /colleges/lovely-professional-university-online 200 in 196ms (next.js: 8ms, application-code: 189ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 154ms (next.js: 1.6ms, application-code: 153ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 154ms (next.js: 9ms, application-code: 145ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 270ms (next.js: 1.5ms, application-code: 268ms)
+ GET /colleges/upes-online 200 in 205ms (next.js: 8ms, application-code: 196ms)
+ GET /colleges/lovely-professional-university-online 200 in 264ms (next.js: 9ms, application-code: 255ms)
+ GET /colleges/upes-online 200 in 213ms (next.js: 1.7ms, application-code: 211ms)
+✓ Compiled in 51ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 84ms (next.js: 12ms, application-code: 72ms)
+✓ Compiled in 101ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 129ms (next.js: 15ms, application-code: 114ms)
+✓ Compiled in 113ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 136ms (next.js: 4ms, application-code: 132ms)
+✓ Compiled in 62ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 108ms (next.js: 15ms, application-code: 93ms)
+✓ Compiled in 151ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 144ms (next.js: 19ms, application-code: 125ms)
+ GET /colleges/lovely-professional-university-online 200 in 406ms (next.js: 9ms, application-code: 397ms)
+ GET /colleges/upes-online 200 in 343ms (next.js: 2ms, application-code: 341ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 254ms (next.js: 17ms, application-code: 237ms)
+✓ Compiled in 84ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 144ms (next.js: 16ms, application-code: 128ms)
+✓ Compiled in 155ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 108ms (next.js: 13ms, application-code: 95ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 116ms (next.js: 15ms, application-code: 102ms)
+  Reload env: .env.local
+ GET /colleges/lovely-professional-university-online/courses 200 in 286ms (next.js: 128ms, application-code: 158ms)
+"revalidateTag" without the second argument is now deprecated, add second argument of "max" or use "updateTag". See more info here: https://nextjs.org/docs/messages/revalidate-tag-single-arg
+ POST /api/revalidate 200 in 296ms (next.js: 238ms, application-code: 57ms)
+ POST /api/revalidate 401 in 8ms (next.js: 1.3ms, application-code: 6ms)
+ GET /colleges/lovely-professional-university-online 200 in 730ms (next.js: 11ms, application-code: 720ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 250ms (next.js: 10ms, application-code: 240ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 236ms (next.js: 1.4ms, application-code: 234ms)
+ GET /colleges/upes-online 200 in 348ms (next.js: 9ms, application-code: 340ms)
+ GET /universities/upes-online 200 in 238ms (next.js: 35ms, application-code: 204ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 196ms (next.js: 1.5ms, application-code: 195ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 404 in 182ms (next.js: 13ms, application-code: 169ms)
+✓ Compiled in 74ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 124ms (next.js: 19ms, application-code: 105ms)
+✓ Compiled in 89ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 90ms (next.js: 14ms, application-code: 76ms)
+✓ Compiled in 41ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 77ms (next.js: 10ms, application-code: 67ms)
+✓ Compiled in 69ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 129ms (next.js: 4ms, application-code: 125ms)
+✓ Compiled in 76ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 83ms (next.js: 12ms, application-code: 72ms)
+✓ Compiled in 52ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 106ms (next.js: 12ms, application-code: 94ms)
+✓ Compiled in 97ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 113ms (next.js: 13ms, application-code: 100ms)
+✓ Compiled in 95ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 81ms (next.js: 12ms, application-code: 69ms)
+✓ Compiled in 160ms
+✓ Compiled in 176ms
+✓ Compiled in 65ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 65ms (next.js: 11ms, application-code: 54ms)
+✓ Compiled in 84ms
+✓ Compiled in 111ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 57ms (next.js: 8ms, application-code: 49ms)
+✓ Compiled in 80ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 68ms (next.js: 10ms, application-code: 58ms)
+✓ Compiled in 91ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 97ms (next.js: 14ms, application-code: 83ms)
+✓ Compiled in 64ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 76ms (next.js: 12ms, application-code: 64ms)
+✓ Compiled in 82ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 65ms (next.js: 12ms, application-code: 53ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 160ms (next.js: 7ms, application-code: 153ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online?section=courses 200 in 166ms (next.js: 1.1ms, application-code: 165ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/lovely-professional-university-online?section=courses 200 in 148ms (next.js: 12ms, application-code: 136ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 745ms (next.js: 11ms, application-code: 734ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/amity-university-online/courses 200 in 930ms (next.js: 11ms, application-code: 918ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 131ms (next.js: 8ms, application-code: 123ms)
+✓ Compiled in 81ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 58ms (next.js: 8ms, application-code: 49ms)
+✓ Compiled in 34ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 78ms (next.js: 13ms, application-code: 65ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 169ms (next.js: 16ms, application-code: 153ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 168ms (next.js: 9ms, application-code: 159ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 156ms (next.js: 8ms, application-code: 147ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/amity-university-online/courses 200 in 179ms (next.js: 1.3ms, application-code: 177ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/manipal-university-online/courses 200 in 1123ms (next.js: 9ms, application-code: 1114ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 351ms (next.js: 9ms, application-code: 342ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/chandigarh-university-online/courses 200 in 793ms (next.js: 3ms, application-code: 791ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/jain-university-online/courses 200 in 665ms (next.js: 10ms, application-code: 655ms)
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/nit-jalandhar/courses 200 in 859ms (next.js: 10ms, application-code: 849ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/amity-university-online/courses 200 in 192ms (next.js: 8ms, application-code: 184ms)
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/nit-jalandhar/courses 200 in 698ms (next.js: 1.6ms, application-code: 696ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 171ms (next.js: 10ms, application-code: 161ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/amity-university-online/courses 200 in 179ms (next.js: 2.0ms, application-code: 177ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/manipal-university-online/courses 200 in 207ms (next.js: 10ms, application-code: 197ms)
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/nit-jalandhar/courses 200 in 650ms (next.js: 2.0ms, application-code: 648ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/chandigarh-university-online/courses 200 in 186ms (next.js: 12ms, application-code: 175ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/lovely-professional-university-online?section=courses 200 in 177ms (next.js: 11ms, application-code: 167ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 284ms (next.js: 10ms, application-code: 274ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/amity-university-online/courses 200 in 255ms (next.js: 11ms, application-code: 243ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 775ms (next.js: 1.6ms, application-code: 774ms)
+ GET /colleges/lovely-professional-university-online 200 in 344ms (next.js: 11ms, application-code: 333ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 231ms (next.js: 2.0ms, application-code: 229ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 199ms (next.js: 16ms, application-code: 183ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 299ms (next.js: 1.9ms, application-code: 297ms)
+ GET / 200 in 205ms (next.js: 10ms, application-code: 195ms)
+ GET /universities 200 in 141ms (next.js: 11ms, application-code: 130ms)
+ GET /universities/upes-online 200 in 200ms (next.js: 8ms, application-code: 193ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/upes-online/courses 200 in 265ms (next.js: 1.3ms, application-code: 264ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /universities/upes-online/admission 200 in 219ms (next.js: 9ms, application-code: 210ms)
+ GET /universities/lovely-professional-university-online 200 in 211ms (next.js: 1.4ms, application-code: 209ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/lovely-professional-university-online/courses 200 in 171ms (next.js: 9ms, application-code: 162ms)
+ GET /universities/lovely-professional-university-online/admission 200 in 145ms (next.js: 1.4ms, application-code: 143ms)
+ GET /colleges/upes-online 200 in 227ms (next.js: 9ms, application-code: 218ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 460ms (next.js: 1.2ms, application-code: 459ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /colleges/upes-online/admission 200 in 244ms (next.js: 10ms, application-code: 233ms)
+ GET /colleges/lovely-professional-university-online 200 in 214ms (next.js: 1.3ms, application-code: 212ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 183ms (next.js: 8ms, application-code: 175ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 165ms (next.js: 1.7ms, application-code: 163ms)
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+College fetch failed for lpu-online: Request failed with status 404 for /website/colleges/lpu-online
+ GET /universities/lpu-online 308 in 256ms (next.js: 11ms, application-code: 246ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 191ms (next.js: 3ms, application-code: 188ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 404 in 292ms (next.js: 9ms, application-code: 283ms)
+✓ Compiled in 240ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 210ms (next.js: 21ms, application-code: 190ms)
+✓ Compiled in 177ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 147ms (next.js: 19ms, application-code: 127ms)
+ GET /universities 200 in 221ms (next.js: 6ms, application-code: 215ms)
+ GET /universities/anna-university-chennai 200 in 824ms (next.js: 17ms, application-code: 807ms)
+ GET /universities/iit-palakkad 200 in 611ms (next.js: 3ms, application-code: 609ms)
+ GET /universities/nit-durgapur 200 in 741ms (next.js: 18ms, application-code: 722ms)
+ GET /universities 200 in 147ms (next.js: 1.0ms, application-code: 146ms)
+✓ Compiled in 36ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 88ms (next.js: 9ms, application-code: 78ms)
+ GET /universities 200 in 117ms (next.js: 1.5ms, application-code: 115ms)
+ GET /universities 200 in 114ms (next.js: 0.9ms, application-code: 113ms)
+ GET / 200 in 173ms (next.js: 1.1ms, application-code: 172ms)
+ GET /universities 200 in 114ms (next.js: 1.0ms, application-code: 113ms)
+ GET /universities/upes-online 200 in 183ms (next.js: 8ms, application-code: 175ms)
+ GET /universities/lovely-professional-university-online 200 in 244ms (next.js: 1.6ms, application-code: 242ms)
+ GET /colleges/lovely-professional-university-online 200 in 226ms (next.js: 8ms, application-code: 219ms)
+ GET /universities/anna-university-chennai 200 in 239ms (next.js: 9ms, application-code: 229ms)
+ GET /universities/nit-durgapur 200 in 194ms (next.js: 1.5ms, application-code: 192ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 305ms (next.js: 8ms, application-code: 296ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 404 in 292ms (next.js: 13ms, application-code: 279ms)
+ GET /universities 200 in 145ms (next.js: 1.5ms, application-code: 144ms)
+✓ Compiled in 80ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 73ms (next.js: 9ms, application-code: 64ms)
+✓ Compiled in 96ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 67ms (next.js: 9ms, application-code: 58ms)
+✓ Compiled in 303ms
+ GET /universities 200 in 165ms (next.js: 1.3ms, application-code: 164ms)
+ GET /universities?page=2 200 in 306ms (next.js: 1.0ms, application-code: 305ms)
+ GET /universities?page=3 200 in 261ms (next.js: 1.4ms, application-code: 259ms)
+ GET / 200 in 203ms (next.js: 1.8ms, application-code: 202ms)
+ GET /universities 200 in 132ms (next.js: 1.1ms, application-code: 131ms)
+ GET /universities?page=2 200 in 169ms (next.js: 1.0ms, application-code: 168ms)
+ GET /universities/upes-online 200 in 247ms (next.js: 8ms, application-code: 238ms)
+ GET /universities/lovely-professional-university-online 200 in 261ms (next.js: 1.3ms, application-code: 260ms)
+ GET /colleges/lovely-professional-university-online 200 in 241ms (next.js: 8ms, application-code: 233ms)
+ GET /universities/anna-university-chennai 200 in 272ms (next.js: 10ms, application-code: 263ms)
+ GET /universities/nit-durgapur 200 in 215ms (next.js: 1.4ms, application-code: 214ms)
+ GET /universities/iit-palakkad 200 in 237ms (next.js: 9ms, application-code: 228ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 263ms (next.js: 1.7ms, application-code: 261ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 404 in 183ms (next.js: 8ms, application-code: 175ms)
+ GET /universities 200 in 127ms (next.js: 0.8ms, application-code: 126ms)
+✓ Compiled in 251ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 274ms (next.js: 24ms, application-code: 250ms)
+✓ Compiled in 165ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 236ms (next.js: 19ms, application-code: 217ms)
+✓ Compiled in 150ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 108ms (next.js: 16ms, application-code: 92ms)
+✓ Compiled in 174ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 227ms (next.js: 20ms, application-code: 206ms)
+✓ Compiled in 102ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 141ms (next.js: 18ms, application-code: 123ms)
+✓ Compiled in 146ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 156ms (next.js: 21ms, application-code: 135ms)
+✓ Compiled in 272ms
+ GET /colleges/lovely-professional-university-online/courses 200 in 173ms (next.js: 24ms, application-code: 149ms)
+✓ Compiled in 246ms
+✓ Compiled in 107ms
+✓ Compiled in 374ms
+✓ Compiled in 137ms
+✓ Compiled in 157ms
+ GET / 200 in 745ms (next.js: 9ms, application-code: 737ms)
+ GET / 200 in 429ms (next.js: 2ms, application-code: 426ms)
+ GET / 200 in 362ms (next.js: 2ms, application-code: 360ms)
+ GET / 200 in 347ms (next.js: 2ms, application-code: 345ms)
+ GET / 200 in 375ms (next.js: 3ms, application-code: 373ms)
+ GET / 200 in 362ms (next.js: 2.0ms, application-code: 360ms)
+ GET /universities 200 in 328ms (next.js: 10ms, application-code: 317ms)
+ GET /universities?page=2 200 in 286ms (next.js: 2ms, application-code: 284ms)
+ GET /universities/upes-online 200 in 526ms (next.js: 20ms, application-code: 506ms)
+ GET /universities/lovely-professional-university-online 200 in 435ms (next.js: 2ms, application-code: 433ms)
+ GET /colleges/lovely-professional-university-online 200 in 475ms (next.js: 15ms, application-code: 460ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 343ms (next.js: 2ms, application-code: 341ms)
+ GET /universities/anna-university-chennai 200 in 456ms (next.js: 17ms, application-code: 439ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 377ms (next.js: 2ms, application-code: 375ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /colleges/not-a-real-university 404 in 282ms (next.js: 16ms, application-code: 267ms)
+ GET /universities 200 in 255ms (next.js: 2ms, application-code: 253ms)
+ GET / 200 in 401ms (next.js: 1.6ms, application-code: 399ms)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 189ms (next.js: 10ms, application-code: 179ms)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 184ms (next.js: 13ms, application-code: 171ms)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+ GET / 200 in 53ms (next.js: 3ms, application-code: 50ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /universities 200 in 48ms (next.js: 3ms, application-code: 45ms)
+ GET /universities/calcutta-business-school-kolkata 200 in 397ms (next.js: 10ms, application-code: 387ms)
+Sub page "courses" is not served by the API for calcutta-business-school-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for calcutta-business-school-kolkata/courses; falling back to the base college payload.
+ GET /colleges/calcutta-business-school-kolkata/courses 200 in 201ms (next.js: 16ms, application-code: 185ms)
+ GET /universities 200 in 39ms (next.js: 1.8ms, application-code: 37ms)
+ GET /universities/brainware-university-kolkata 200 in 469ms (next.js: 10ms, application-code: 459ms)
+ GET /universities 200 in 45ms (next.js: 1.9ms, application-code: 43ms)
+ GET /universities 200 in 290ms (next.js: 3ms, application-code: 287ms)
+ GET / 200 in 48ms (next.js: 1.8ms, application-code: 47ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /universities 200 in 58ms (next.js: 2ms, application-code: 56ms)
+ GET /universities/anna-university-chennai 200 in 97ms (next.js: 18ms, application-code: 80ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 567ms (next.js: 22ms, application-code: 545ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /colleges/upes-online/admission 200 in 477ms (next.js: 4ms, application-code: 473ms)
+ GET /colleges/amity-university-online/admission 200 in 441ms (next.js: 15ms, application-code: 426ms)
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+ GET /colleges/anna-university-chennai/courses 200 in 477ms (next.js: 57ms, application-code: 420ms)
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 1222ms (next.js: 59ms, application-code: 1163ms)
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `UGC, NAAC A++`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 632ms (next.js: 29ms, application-code: 603ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 315ms (next.js: 3ms, application-code: 313ms)
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 574ms (next.js: 17ms, application-code: 557ms)
+✓ Compiled in 136ms
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 535ms (next.js: 19ms, application-code: 516ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 407ms (next.js: 3ms, application-code: 404ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 317ms (next.js: 14ms, application-code: 303ms)
+✓ Compiled in 113ms
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 538ms (next.js: 15ms, application-code: 523ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 305ms (next.js: 2ms, application-code: 303ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 304ms (next.js: 15ms, application-code: 289ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/amity-university-online/courses 200 in 312ms (next.js: 2ms, application-code: 310ms)
+ GET / 200 in 724ms (next.js: 2ms, application-code: 721ms)
+ GET /universities 200 in 498ms (next.js: 6ms, application-code: 492ms)
+ GET /universities?page=2 200 in 526ms (next.js: 4ms, application-code: 522ms)
+ GET /universities/upes-online 200 in 532ms (next.js: 24ms, application-code: 508ms)
+ GET /universities/lovely-professional-university-online 200 in 643ms (next.js: 3ms, application-code: 640ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/lovely-professional-university-online/courses 200 in 405ms (next.js: 23ms, application-code: 381ms)
+ GET /universities/lovely-professional-university-online/admission 200 in 331ms (next.js: 4ms, application-code: 328ms)
+ GET /colleges/lovely-professional-university-online 200 in 697ms (next.js: 37ms, application-code: 660ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 650ms (next.js: 2ms, application-code: 648ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 520ms (next.js: 45ms, application-code: 475ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 564ms (next.js: 17ms, application-code: 547ms)
+✓ Compiled in 192ms
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+ GET /colleges/anna-university-chennai/courses 200 in 401ms (next.js: 23ms, application-code: 377ms)
+✓ Compiled in 258ms
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+ GET /colleges/anna-university-chennai/courses 200 in 348ms (next.js: 20ms, application-code: 328ms)
+✓ Compiled in 190ms
+✓ Compiled in 309ms
+✓ Compiled in 185ms
+✓ Compiled in 107ms
+✓ Compiled in 185ms
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+ GET /colleges/anna-university-chennai/courses 200 in 316ms (next.js: 17ms, application-code: 298ms)
+✓ Compiled in 375ms
+✓ Compiled in 284ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+⨯ ReferenceError: metrics is not defined
+    at CoursesAndFeesView (src\components\college\CoursesAndFeesView.jsx:297:16)
+  295 |
+  296 |               {/* Metrics */}
+> 297 |               {metrics.length > 0 && (
+      |                ^
+  298 |                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-7">
+  299 |                   {metrics.map((metric) => {
+  300 |                     const Icon = METRIC_ICON[metric.icon] || Award; {
+  digest: '3820420958'
+}
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+ GET /colleges/anna-university-chennai/courses 500 in 1301ms (next.js: 25ms, application-code: 1277ms)
+✓ Compiled in 96ms
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 719ms (next.js: 30ms, application-code: 689ms)
+✓ Compiled in 367ms
+✓ Compiled in 197ms
+ GET /colleges/lovely-professional-university-online 200 in 838ms (next.js: 17ms, application-code: 820ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 447ms (next.js: 6ms, application-code: 441ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 364ms (next.js: 21ms, application-code: 343ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 472ms (next.js: 2ms, application-code: 469ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 402ms (next.js: 16ms, application-code: 386ms)
+✓ Compiled in 121ms
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 1000ms (next.js: 22ms, application-code: 978ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/amity-university-online/courses 200 in 428ms (next.js: 19ms, application-code: 409ms)
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 517ms (next.js: 3ms, application-code: 515ms)
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for nit-jalandhar/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/nit-jalandhar/courses 200 in 567ms (next.js: 27ms, application-code: 540ms)
+ GET /colleges/lovely-professional-university-online 200 in 716ms (next.js: 20ms, application-code: 696ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 559ms (next.js: 1.6ms, application-code: 557ms)
+✓ Compiled in 166ms
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+ GET /colleges/anna-university-chennai/courses 200 in 641ms (next.js: 25ms, application-code: 616ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 602ms (next.js: 23ms, application-code: 579ms)
+ GET /colleges/lovely-professional-university-online 200 in 560ms (next.js: 18ms, application-code: 543ms)
+ GET /colleges/lovely-professional-university-online 200 in 581ms (next.js: 34ms, application-code: 546ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 456ms (next.js: 3ms, application-code: 453ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 269ms (next.js: 16ms, application-code: 254ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 573ms (next.js: 1.9ms, application-code: 572ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/lovely-professional-university-online/courses 200 in 432ms (next.js: 39ms, application-code: 394ms)
+ GET /universities/upes-online 200 in 371ms (next.js: 2.0ms, application-code: 369ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/upes-online/courses 200 in 438ms (next.js: 15ms, application-code: 423ms)
+ GET /universities/amity-university-online/admission 200 in 280ms (next.js: 1.9ms, application-code: 278ms)
+ GET /universities/anna-university-chennai 200 in 410ms (next.js: 13ms, application-code: 396ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 348ms (next.js: 1.7ms, application-code: 346ms)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 1765ms (next.js: 46ms, application-code: 1720ms)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for anna-university-chennai/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/anna-university-chennai/courses 200 in 1708ms (next.js: 54ms, application-code: 1654ms)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+ GET /universities 200 in 197ms (next.js: 13ms, application-code: 185ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /universities?page=2 200 in 161ms (next.js: 7ms, application-code: 154ms)
+✓ Compiled in 360ms
+✓ Compiled in 122ms
+✓ Compiled in 263ms
+ GET / 200 in 644ms (next.js: 7ms, application-code: 638ms)
+ GET /universities 200 in 541ms (next.js: 4ms, application-code: 537ms)
+ GET /colleges/lovely-professional-university-online 200 in 954ms (next.js: 37ms, application-code: 917ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 369ms (next.js: 3ms, application-code: 366ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 417ms (next.js: 17ms, application-code: 399ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 364ms (next.js: 3ms, application-code: 361ms)
+ GET /universities/upes-online 200 in 631ms (next.js: 24ms, application-code: 607ms)
+ GET /universities/amity-university-online 200 in 722ms (next.js: 5ms, application-code: 717ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 371ms (next.js: 18ms, application-code: 352ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 480ms (next.js: 18ms, application-code: 463ms)
+ GET /universities?page=2 200 in 1282ms (next.js: 8ms, application-code: 1275ms)
+ GET /universities/calcutta-institute-of-technology-howrah-maidan-kolkata 200 in 713ms (next.js: 35ms, application-code: 678ms)
+[browser] Uncaught RangeError: Invalid array length
+    at <unknown> (src/components/college/OverviewView.jsx:1300:34)
+    at Array.map (<anonymous>)
+    at OverviewView (src/components/college/OverviewView.jsx:1290:6)
+    at UniversityPage (src\app\universities\[...slug]\page.jsx:53:5)
+  1298 |                         <div className="flex items-center justify-between gap-3">
+  1299 |                           <div className="flex text-amber-400 gap-0.5 items-center">
+> 1300 |                             {[...Array(t.rating)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current text-amber-400" />)}
+       |                                  ^
+  1301 |                             <span className="text-[10px] font-normal text-[#000f22] ml-1.5">5.0</span>
+  1302 |                           </div>
+  1303 |                           <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-normal bg-[#eef4ff] text-[#115eaf] border border-[#d5e3ff]">
+ GET /universities?page=2 200 in 474ms (next.js: 5ms, application-code: 470ms)
+ GET /universities/burdwan-institute-of-management-and-computer-science-bardhaman 200 in 796ms (next.js: 35ms, application-code: 761ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+Sub page "courses" is not served by the API for burdwan-institute-of-management-and-computer-science-bardhaman/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for burdwan-institute-of-management-and-computer-science-bardhaman/courses; falling back to the base college payload.
+ GET /colleges/burdwan-institute-of-management-and-computer-science-bardhaman/courses 200 in 331ms (next.js: 19ms, application-code: 311ms)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information. 
+ GET / 200 in 136ms (next.js: 6ms, application-code: 130ms)
+ GET / 200 in 135ms (next.js: 7ms, application-code: 128ms)
+ GET /universities 200 in 140ms (next.js: 7ms, application-code: 133ms)
+ GET /universities/nit-durgapur 200 in 377ms (next.js: 71ms, application-code: 305ms)
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Shortlisting and Selection`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+✓ Compiled in 272ms
+ GET /universities 200 in 144ms (next.js: 5ms, application-code: 139ms)
+ GET /universities/the-neotia-university-kolkata 200 in 1310ms (next.js: 17ms, application-code: 1293ms)
+ GET /universities/calcutta-institute-of-technology-howrah-maidan-kolkata 200 in 482ms (next.js: 19ms, application-code: 463ms)
+ GET /universities/frankfinn-institute-of-air-hostess-training-rajouri-garden-delhi 200 in 774ms (next.js: 1.9ms, application-code: 772ms)
+ GET /universities/jadavpur-university-kolkata 200 in 1065ms (next.js: 19ms, application-code: 1046ms)
+ GET /universities/sister-nivedita-university-kolkata 200 in 1281ms (next.js: 39ms, application-code: 1242ms)
+ GET /universities/heritage-institute-of-technology-kolkata 200 in 818ms (next.js: 20ms, application-code: 798ms)
+ GET /universities/lovely-professional-university-online 200 in 602ms (next.js: 39ms, application-code: 563ms)
+ GET /universities/upes-online 200 in 501ms (next.js: 23ms, application-code: 478ms)
+ GET /universities/heritage-institute-of-technology-kolkata 200 in 682ms (next.js: 19ms, application-code: 663ms)
+ GET /universities/the-neotia-university-kolkata 200 in 360ms (next.js: 36ms, application-code: 324ms)
+[browser] Encountered two children with the same key, `General`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `General`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `General`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `General`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `General`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `General`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+ GET / 200 in 163ms (next.js: 14ms, application-code: 149ms)
+ GET / 200 in 678ms (next.js: 6ms, application-code: 672ms)
+ GET /universities 200 in 560ms (next.js: 3ms, application-code: 557ms)
+ GET /universities/the-neotia-university-kolkata 200 in 933ms (next.js: 33ms, application-code: 900ms)
+ GET /universities/heritage-institute-of-technology-kolkata 200 in 870ms (next.js: 46ms, application-code: 824ms)
+ GET /universities/jadavpur-university-kolkata 200 in 513ms (next.js: 1.9ms, application-code: 511ms)
+ GET /colleges/heritage-institute-of-technology-kolkata 200 in 413ms (next.js: 25ms, application-code: 388ms)
+Sub page "courses" is not served by the API for heritage-institute-of-technology-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for heritage-institute-of-technology-kolkata/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/heritage-institute-of-technology-kolkata/courses 200 in 607ms (next.js: 2ms, application-code: 605ms)
+Sub page "admission" is not served by the API for heritage-institute-of-technology-kolkata/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for heritage-institute-of-technology-kolkata/admission; falling back to the base college payload.
+ GET /colleges/heritage-institute-of-technology-kolkata/admission 200 in 499ms (next.js: 22ms, application-code: 477ms)
+ GET /colleges/lovely-professional-university-online 200 in 557ms (next.js: 3ms, application-code: 554ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 599ms (next.js: 40ms, application-code: 558ms)
+ GET /universities 200 in 202ms (next.js: 7ms, application-code: 195ms)
+ GET /universities/institute-of-management-study-kolkata 200 in 829ms (next.js: 36ms, application-code: 793ms)
+ GET / 200 in 518ms (next.js: 2ms, application-code: 516ms)
+ GET /universities 200 in 352ms (next.js: 2ms, application-code: 350ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 389ms (next.js: 23ms, application-code: 366ms)
+ GET / 200 in 587ms (next.js: 4ms, application-code: 584ms)
+ GET /universities 200 in 323ms (next.js: 2ms, application-code: 321ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 385ms (next.js: 18ms, application-code: 367ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 1345ms (next.js: 3ms, application-code: 1343ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 423ms (next.js: 19ms, application-code: 404ms)
+ GET / 200 in 572ms (next.js: 3ms, application-code: 568ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 510ms (next.js: 34ms, application-code: 476ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 380ms (next.js: 23ms, application-code: 357ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 377ms (next.js: 17ms, application-code: 360ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 432ms (next.js: 20ms, application-code: 412ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 387ms (next.js: 22ms, application-code: 365ms)
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for upes-online/courses; falling back to the base college payload.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/upes-online/courses 200 in 637ms (next.js: 3ms, application-code: 634ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/amity-university-online/courses 200 in 469ms (next.js: 31ms, application-code: 438ms)
+ GET / 200 in 573ms (next.js: 3ms, application-code: 570ms)
+ GET /universities 200 in 550ms (next.js: 5ms, application-code: 545ms)
+ GET /universities?page=2 200 in 594ms (next.js: 4ms, application-code: 590ms)
+ GET /universities/upes-online 200 in 561ms (next.js: 28ms, application-code: 533ms)
+ GET /universities/lovely-professional-university-online 200 in 636ms (next.js: 2.0ms, application-code: 634ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /universities/lovely-professional-university-online/courses 200 in 591ms (next.js: 31ms, application-code: 560ms)
+ GET /universities/lovely-professional-university-online/admission 200 in 619ms (next.js: 3ms, application-code: 617ms)
+ GET /colleges/lovely-professional-university-online 200 in 726ms (next.js: 28ms, application-code: 698ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 474ms (next.js: 5ms, application-code: 468ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 460ms (next.js: 29ms, application-code: 431ms)
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+Sub page "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 630ms (next.js: 1.9ms, application-code: 628ms)
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 441ms (next.js: 60ms, application-code: 382ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 396ms (next.js: 21ms, application-code: 375ms)
+✓ Compiled in 147ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 474ms (next.js: 69ms, application-code: 405ms)
+✓ Compiled in 118ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 502ms (next.js: 25ms, application-code: 476ms)
+✓ Compiled in 123ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 418ms (next.js: 7ms, application-code: 410ms)
+✓ Compiled in 179ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 428ms (next.js: 23ms, application-code: 405ms)
+✓ Compiled in 171ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 530ms (next.js: 24ms, application-code: 506ms)
+✓ Compiled in 118ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 450ms (next.js: 20ms, application-code: 430ms)
+✓ Compiled in 180ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 507ms (next.js: 20ms, application-code: 487ms)
+✓ Compiled in 303ms
+ GET /colleges/lovely-professional-university-online/admission 200 in 382ms (next.js: 19ms, application-code: 363ms)
+✓ Compiled in 120ms
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+Sub page "courses" is not served by the API for institute-of-management-study-kolkata/courses; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/courses 200 in 581ms (next.js: 23ms, application-code: 558ms)
+Sub page "admission" is not served by the API for institute-of-management-study-kolkata/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for institute-of-management-study-kolkata/admission; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/admission 200 in 706ms (next.js: 33ms, application-code: 673ms)
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+⨯ ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  [90m138 |[0m   ];
+  [90m139 |[0m
+[31m[1m>[0m [90m140 |[0m   [36mconst[0m hasEligibilityFee = [33mBoolean[0m(
+  [90m    |[0m         [31m[1m^^^^^^^^^^^^^^^^^[0m
+  [90m141 |[0m     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  [90m142 |[0m   );
+  [90m143 |[0m
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+
+./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  [90m129 |[0m   [36mconst[0m [showAllEligibility, setShowAllEligibility] = useState([36mfalse[0m);
+  [90m130 |[0m
+[31m[1m>[0m [90m131 |[0m   [36mconst[0m scholarshipRows = [
+  [90m    |[0m         [31m[1m^^^^^^^^^^^^^^^[0m
+  [90m132 |[0m     ...(data.scholarshipSchemes || []),
+  [90m133 |[0m     ...(college.scholarships || []).map((scholarship, idx) => ({
+  [90m134 |[0m       name: scholarship.name || scholarship.title || [32m""[0m,
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+
+./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  [90m127 |[0m   };
+  [90m128 |[0m
+[31m[1m>[0m [90m129 |[0m   [36mconst[0m [showAllEligibility, setShowAllEligibility] = useState([36mfalse[0m);
+  [90m    |[0m                              [31m[1m^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m130 |[0m
+  [90m131 |[0m   [36mconst[0m scholarshipRows = [
+  [90m132 |[0m     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+
+./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  [90m127 |[0m   };
+  [90m128 |[0m
+[31m[1m>[0m [90m129 |[0m   [36mconst[0m [showAllEligibility, setShowAllEligibility] = useState([36mfalse[0m);
+  [90m    |[0m          [31m[1m^^^^^^^^^^^^^^^^^^[0m
+  [90m130 |[0m
+  [90m131 |[0m   [36mconst[0m scholarshipRows = [
+  [90m132 |[0m     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+○ Compiling /_error ...
+ GET /colleges/institute-of-management-study-kolkata/admission 500 in 4.4s (next.js: 3.7s, application-code: 732ms)
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] Uncaught Error: ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:140:9
+Error: the name `hasEligibilityFee` is defined multiple times
+  138 |   ];
+  139 |
+> 140 |   const hasEligibilityFee = Boolean(
+      |         ^^^^^^^^^^^^^^^^^
+  141 |     (eligibility?.items || []).some((row) => row.feeSem || row.totalFee)
+  142 |   );
+  143 |
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:131:9
+Error: the name `scholarshipRows` is defined multiple times
+  129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+  130 |
+> 131 |   const scholarshipRows = [
+      |         ^^^^^^^^^^^^^^^
+  132 |     ...(data.scholarshipSchemes || []),
+  133 |     ...(college.scholarships || []).map((scholarship, idx) => ({
+  134 |       name: scholarship.name || scholarship.title || "",
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const scholarshipRows = [
+  132 |     ...(data.scholarshipSchemes || []),
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+⨯ ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  [90m127 |[0m   };
+  [90m128 |[0m
+[31m[1m>[0m [90m129 |[0m   [36mconst[0m [showAllEligibility, setShowAllEligibility] = useState([36mfalse[0m);
+  [90m    |[0m                              [31m[1m^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m130 |[0m
+  [90m131 |[0m   [36mconst[0m highlightStats = [
+  [90m132 |[0m     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+
+./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  [90m127 |[0m   };
+  [90m128 |[0m
+[31m[1m>[0m [90m129 |[0m   [36mconst[0m [showAllEligibility, setShowAllEligibility] = useState([36mfalse[0m);
+  [90m    |[0m          [31m[1m^^^^^^^^^^^^^^^^^^[0m
+  [90m130 |[0m
+  [90m131 |[0m   [36mconst[0m highlightStats = [
+  [90m132 |[0m     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+ GET /colleges/institute-of-management-study-kolkata/admission 500 in 81ms (next.js: 34ms, application-code: 47ms)
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] Uncaught Error: ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+⨯ ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  [90m127 |[0m   };
+  [90m128 |[0m
+[31m[1m>[0m [90m129 |[0m   [36mconst[0m [showAllEligibility, setShowAllEligibility] = useState([36mfalse[0m);
+  [90m    |[0m                              [31m[1m^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m130 |[0m
+  [90m131 |[0m   [36mconst[0m highlightStats = [
+  [90m132 |[0m     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+
+./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  [90m127 |[0m   };
+  [90m128 |[0m
+[31m[1m>[0m [90m129 |[0m   [36mconst[0m [showAllEligibility, setShowAllEligibility] = useState([36mfalse[0m);
+  [90m    |[0m          [31m[1m^^^^^^^^^^^^^^^^^^[0m
+  [90m130 |[0m
+  [90m131 |[0m   [36mconst[0m highlightStats = [
+  [90m132 |[0m     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+
+ GET /colleges/institute-of-management-study-kolkata/admission 500 in 80ms (next.js: 25ms, application-code: 54ms)
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] Uncaught Error: ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/colleges/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:30
+Error: the name `setShowAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |                              ^^^^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+[browser] ./src/components/college/CollegeAdmission.jsx:129:10
+Error: the name `showAllEligibility` is defined multiple times
+  127 |   };
+  128 |
+> 129 |   const [showAllEligibility, setShowAllEligibility] = useState(false);
+      |          ^^^^^^^^^^^^^^^^^^
+  130 |
+  131 |   const highlightStats = [
+  132 |     {
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/college/CollegeAdmission.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Client Component Browser]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/college/CollegeAdmission.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Client Component SSR]
+    ./src/components/college/CollegeTemplate.jsx [Server Component]
+    ./src/app/universities/[...slug]/page.jsx [Server Component] 
+✓ Compiled in 115ms
+Sub page "admission" is not served by the API for institute-of-management-study-kolkata/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for institute-of-management-study-kolkata/admission; falling back to the base college payload.
+ GET /colleges/institute-of-management-study-kolkata/admission 200 in 632ms (next.js: 21ms, application-code: 612ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 462ms (next.js: 30ms, application-code: 432ms)
+ GET /colleges/amity-university-online/admission 200 in 335ms (next.js: 1.9ms, application-code: 333ms)
+ GET /colleges/nit-jalandhar/admission 200 in 435ms (next.js: 1.6ms, application-code: 433ms)
+Sub page "admission" is not served by the API for anna-university-chennai/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for anna-university-chennai/admission; falling back to the base college payload.
+ GET /colleges/anna-university-chennai/admission 200 in 586ms (next.js: 14ms, application-code: 572ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 312ms (next.js: 23ms, application-code: 289ms)
+✓ Compiled in 197ms
+ GET /colleges/lovely-professional-university-online/admission 200 in 387ms (next.js: 32ms, application-code: 355ms)
+ GET /colleges/amity-university-online/admission 200 in 297ms (next.js: 1.8ms, application-code: 295ms)
+ GET /colleges/nit-jalandhar/admission 200 in 284ms (next.js: 18ms, application-code: 266ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 344ms (next.js: 19ms, application-code: 325ms)
+ GET /colleges/amity-university-online/admission 200 in 247ms (next.js: 2ms, application-code: 245ms)
+ GET /colleges/nit-jalandhar/admission 200 in 456ms (next.js: 23ms, application-code: 433ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 452ms (next.js: 18ms, application-code: 435ms)
+Sub page "admission" is not served by the API for amrity-university-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for amrity-university-online/admission; falling back to the base college payload.
+College fetch failed for amrity-university-online/admission: Request failed with status 404 for /website/colleges/amrity-university-online
+College fetch failed for amrity-university-online/admission: Request failed with status 404 for /website/colleges/amrity-university-online
+ GET /colleges/amrity-university-online/admission 404 in 554ms (next.js: 3ms, application-code: 551ms)
+Sub page "admission" is not served by the API for amrita-university-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for amrita-university-online/admission; falling back to the base college payload.
+ GET /colleges/amrita-university-online/admission 200 in 903ms (next.js: 3ms, application-code: 900ms)
+ GET /colleges/nit-jalandhar/admission 200 in 431ms (next.js: 32ms, application-code: 399ms)
+ GET /universities/lovely-professional-university-online/admission 200 in 489ms (next.js: 26ms, application-code: 464ms)
+ GET /universities/amity-university-online/admission 200 in 467ms (next.js: 4ms, application-code: 463ms)
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for upes-online/admission; falling back to the base college payload.
+ GET /universities/upes-online/admission 200 in 689ms (next.js: 28ms, application-code: 661ms)
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CoursesAndFeesView`. See https://react.dev/link/warning-keys for more information.
+ GET /colleges/lovely-professional-university-online/courses 200 in 487ms (next.js: 21ms, application-code: 466ms)
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+College fetch failed for not-a-real-university: Request failed with status 404 for /website/colleges/not-a-real-university
+ GET /universities/not-a-real-university 404 in 454ms (next.js: 18ms, application-code: 436ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 388ms (next.js: 19ms, application-code: 370ms)
+ GET /colleges/nit-jalandhar/admission 200 in 459ms (next.js: 3ms, application-code: 456ms)
+Sub page "admission" is not served by the API for amita-university-online/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for amita-university-online/admission; falling back to the base college payload.
+College fetch failed for amita-university-online/admission: Request failed with status 404 for /website/colleges/amita-university-online
+College fetch failed for amita-university-online/admission: Request failed with status 404 for /website/colleges/amita-university-online
+ GET /colleges/amita-university-online/admission 404 in 522ms (next.js: 19ms, application-code: 503ms)
+ GET /universities 200 in 168ms (next.js: 12ms, application-code: 156ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /universities/calcutta-business-school-kolkata 200 in 393ms (next.js: 36ms, application-code: 357ms)
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+Sub page "admission" is not served by the API for calcutta-business-school-kolkata/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for calcutta-business-school-kolkata/admission; falling back to the base college payload.
+ GET /colleges/calcutta-business-school-kolkata/admission 200 in 346ms (next.js: 16ms, application-code: 330ms)
+Sub page "admission" is not served by the API for calcutta-business-school-kolkata/admission; falling back to the base college payload.
+Sub page "admission" is not served by the API for calcutta-business-school-kolkata/admission; falling back to the base college payload.
+ GET /colleges/calcutta-business-school-kolkata/admission 200 in 506ms (next.js: 10ms, application-code: 496ms)
+ GET /colleges/calcutta-business-school-kolkata 200 in 79ms (next.js: 16ms, application-code: 64ms)
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `Entrepreneurship & Family Business`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+ GET /universities 200 in 47ms (next.js: 1.9ms, application-code: 45ms)
+ GET / 200 in 44ms (next.js: 4ms, application-code: 40ms)
+[?25h

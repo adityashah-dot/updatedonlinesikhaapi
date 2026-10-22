@@ -1,26 +1,566 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  *, ::before, ::after {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  html, body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1a222f;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  /* Page Headings: font-weight 700 */
+  h1, .page-heading {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* Normal Headings: font-weight 600 */
+  h2, h3, h4, h5, h6, .section-heading, .normal-heading {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* Normal Text: font-weight 400 */
+  p, span, div, li, input, textarea, select {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+  b, strong {
+    font-weight: 600;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Compact connection between headings and subsequent subtitle/description text across all pages */
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p,
+  .section-title + p,
+  .page-heading + p,
+  .section-heading + p,
+  h1 + .section-description,
+  h2 + .section-description,
+  h3 + .section-description,
+  h4 + .section-description {
+    margin-top: 4px !important;
+  }
+
+  /* Support decorative divider strip between heading and description */
+  h1 + span + p,
+  h2 + span + p,
+  h3 + span + p,
+  .section-title + span + p {
+    margin-top: 4px !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Page-level spacing - Compact 20px-24px section gap */
+.page-section {
+  margin-bottom: 22px;
+}
+
+@media (max-width: 640px) {
+  .page-section {
+    margin-bottom: 16px;
+  }
+}
+
+/* Consistent wrapper utility class enforcing uniform vertical margin between sections */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.section-container > :not([hidden]) {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .section-container {
+    gap: 16px;
+  }
+}
+
+/* Main headings - Minimal gap before description */
+.section-title {
+  margin-bottom: 4px;
+}
+
+/* Description below headings */
+.section-description {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+/* Cards - Strict 16px-20px internal padding */
+.card {
+  padding: 18px 22px;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 14px 16px;
+  }
+}
+
+/* Avoid oversized empty blocks */
+.content-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* Custom styled select dropdowns (only for native selects without custom icon / appearance-none) */
+select:not(.appearance-none):not([class*="appearance-none"]) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23115eaf' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.25em 1.25em;
+  padding-right: 2.25rem;
+  appearance: none;
+}
+
+select.appearance-none,
+select[class*="appearance-none"] {
+  background-image: none !important;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for clean UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f3ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4c6ce;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #115eaf;
+}
+
+/* TOC slide-in animation */
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+.animate-slide-in-left {
+  animation: slideInLeft 0.25s ease-out;
+}
+
+/* Logo strip fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Recruiter logo marquee scroll */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   Mobile-only full-bleed layout (<= 767px)
+   Applies the hero's edge-to-edge, left-aligned mobile layout to every
+   section. Everything at 768px and above is left untouched.
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* 6. Never allow horizontal page scroll (clip keeps sticky working) */
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* 1. Page shell: drop the centered max-width container and its gutters */
+  main > div > div {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove the gap between stacked sections - each section owns its padding */
+  main .space-y-5 > * + * {
+    margin-top: 0 !important;
+  }
+
+  /* 1. + 3. Every section is full-bleed with full-width content     */
+  /* 5. Content-sized height; the section background meets both edges */
+  main section {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 32px 16px !important;
+    overflow-x: hidden;
+  }
+
+  /* 5. Only hero-type sections fill the viewport height */
+  main section:has(h1) {
+    min-height: 100svh;
+  }
+
+  /* 2. Left-align headings, paragraphs, badges and labels */
+  main section {
+    text-align: left !important;
+  }
+  main section [class*='text-center'] {
+    text-align: left !important;
+  }
+
+  /* 2. Drop centered (auto-margin) blocks so everything shares one edge */
+  main section [class*='mx-auto'] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 3. Cards, panels and form boxes stretch to the content width */
+  main section [class*='max-w-'] {
+    max-width: 100% !important;
+  }
+
+  /* 4. Fluid, balanced headings (explicit one-line headings are preserved) */
+  main section h1:not(.whitespace-nowrap),
+  main section h2:not(.whitespace-nowrap) {
+    font-size: clamp(24px, 6.5vw, 32px) !important;
+    line-height: 1.25 !important;
+    text-wrap: balance;
+  }
+}
+
+/* ==========================================================================
+   University listing page - mobile search card & toolbar (<= 767px)
+   Desktop (>= 768px) is left untouched.
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Search section: 12px side gutters, tighter vertical rhythm, no hero fill */
+  main section.uv-hero.uv-hero {
+    padding: 20px 12px !important;
+    min-height: 0 !important;
+  }
+  .uv-search-shell {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* Card: full content width, 16px padding, 14px radius */
+  main section .uv-search-card.uv-search-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+  /* Fields: stacked, 10px apart; input + dropdown 48px tall, 15px text */
+  .uv-search-card .uv-search-fields {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .uv-search-card .uv-search-fields .uv-field {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 16px !important;
+  }
+  /* Button: full width, 48px tall (12px above it) */
+  .uv-search-card .uv-search-fields .uv-find-btn {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 15px !important;
+  }
+  /* Trending row: 14px above it */
+  .uv-search-card .uv-trending {
+    margin-top: 14px !important;
+  }
+  /* Listing: remove double side gutters and set the section gap */
+  .uv-listing {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 16px !important;
+  }
+}
+
+/* ==========================================================================
+   Comprehensive Dark Theme Styling
+   ========================================================================== */
+html.dark,
+body.dark,
+.dark body {
+  background-color: #0b111e !important;
+  color: #e2e8f0 !important;
+}
+
+/* Background Color Adjustments */
+.dark .bg-white {
+  background-color: #121c2e !important;
+  color: #e2e8f0;
+}
+
+.dark .bg-\[\#f9f9ff\] {
+  background-color: #0b111e !important;
+}
+
+.dark .bg-\[\#f8faff\],
+.dark .bg-\[\#eff6ff\],
+.dark .bg-blue-50 {
+  background-color: #162438 !important;
+}
+
+.dark .bg-\[\#f0f4f8\],
+.dark .bg-\[\#f0f3ff\] {
+  background-color: #182538 !important;
+}
+
+.dark .bg-\[\#f0f4f8\]\/60,
+.dark .bg-\[\#f0f4f8\]\/50 {
+  background-color: rgba(24, 37, 56, 0.75) !important;
+}
+
+/* Text Color Adjustments */
+.dark .text-\[\#000f22\],
+.dark .text-\[\#1e1338\],
+.dark .text-slate-900,
+.dark .text-\[\#111c2d\] {
+  color: #f8fafc !important;
+}
+
+.dark .text-\[\#43474d\],
+.dark .text-\[\#555960\],
+.dark .text-\[\#74777e\],
+.dark .text-slate-700,
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Border Color Adjustments */
+.dark .border-\[\#c4c6ce\],
+.dark .border-\[\#c4c6ce\]\/60,
+.dark .border-\[\#c4c6ce\]\/50,
+.dark .border-\[\#c4c6ce\]\/40,
+.dark .border-\[\#c4c6ce\]\/70,
+.dark .border-\[\#c4c6ce\]\/75,
+.dark .border-\[\#d5e3ff\],
+.dark .border-\[\#dbeafe\],
+.dark .border-\[\#e7eeff\],
+.dark .border-blue-100,
+.dark .border-slate-200,
+.dark .border-slate-300 {
+  border-color: #24344d !important;
+}
+
+.dark .divide-\[\#c4c6ce\]\/60 > * {
+  border-color: #24344d !important;
+}
+
+/* Form Inputs, Selects & Placeholders */
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+  background-color: #142033 !important;
+  color: #f8fafc !important;
+  border-color: #2b3d58 !important;
+}
+
+.dark input::placeholder {
+  color: #64748b !important;
+}
+
+/* Table in Dark Mode */
+.dark table thead tr {
+  background-color: #16243a !important;
+  color: #f8fafc !important;
+  border-color: #24344d !important;
+}
+
+.dark table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Scrollbar in Dark Mode */
+.dark ::-webkit-scrollbar-track {
+  background: #0b111e;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #24344d;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #115eaf;
+}
+
+/* ==========================================================================
+   University detail pages (LPU / Amity / CU / Manipal / Jain / UPES)
+   Mobile foundation - max-width: 767px only. Desktop (>= 768px) untouched.
+   Scoped with .uni-detail so it never leaks to other views.
+   ========================================================================== */
+@media (max-width: 767px) {
+  .uni-detail {
+    --page-pad: 16px;
+    --body-size: 15px;
+    --h1: clamp(24px, 6.5vw, 32px);
+    --h2: clamp(20px, 5.5vw, 26px);
+    --h3: 17px;
+    --tap: 44px;
+    /* clip (not hidden) so the sticky section tab bar keeps working */
+    overflow-x: hidden;
+    overflow-x: clip;
+    padding-bottom: 88px; /* clears the fixed bottom dock + floating widgets */
+  }
+
+  /* Sections: full-bleed, 16px gutters, one consistent 24px vertical rhythm */
+  .uni-detail .page-section {
+    padding: 24px var(--page-pad) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: 0 !important;
+    border-radius: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+
+  /* Typography (A / B / J) */
+  .uni-detail h1 {
+    font-size: var(--h1) !important;
+    line-height: 1.25 !important;
+    letter-spacing: normal !important;
+    text-wrap: balance;
+  }
+  .uni-detail h2 {
+    font-size: var(--h2) !important;
+    line-height: 1.3 !important;
+    letter-spacing: normal !important;
+    text-wrap: balance;
+  }
+  .uni-detail h3 {
+    font-size: var(--h3) !important;
+    line-height: 1.3 !important;
+  }
+  .uni-detail p {
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+  /* Captions must not fall below 12px */
+  .uni-detail [class*="text-[10px]"],
+  .uni-detail [class*="text-[11px]"] {
+    font-size: 12px !important;
+  }
+
+  /* Forms (H): 16px stops iOS zoom; controls inherit the site font */
+  .uni-detail input:not([type="checkbox"]):not([type="radio"]),
+  .uni-detail select,
+  .uni-detail textarea {
+    font-family: inherit !important;
+    font-size: 16px !important;
+    min-height: 48px !important;
+  }
+  /* Especially on controls that also carry a text-[10px]/[11px] utility */
+  .uni-detail input[class*="text-"],
+  .uni-detail select[class*="text-"],
+  .uni-detail textarea[class*="text-"] {
+    font-size: 16px !important;
+  }
+  .uni-detail button {
+    font-family: inherit !important;
+  }
+
+  /* Chip / tab rows (D): keep sideways swipe, hide the scrollbar */
+  .uni-detail [class*="overflow-x-auto"] {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .uni-detail [class*="overflow-x-auto"]::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Batch 2: mobile form controls + tap-target hit areas (<= 767px)
+   Visual boxes are unchanged; extras only enlarge the tappable area.
+   ========================================================================== */
+@media (max-width: 767px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="hidden"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+    min-height: 48px !important;
+  }
+
+  .tap-chip,
+  .tap-hit {
+    position: relative;
+  }
+  .tap-chip::after,
+  .tap-hit::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+  }
+
+  footer button,
+  footer a[href] {
+    position: relative;
+  }
+  footer button::after,
+  footer a[href]::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+  }
+}
+
+/* ==========================================================================
+   Batch 3 (8c): no text below 12px. Applies at every viewport; boxes are
+   allowed to grow, nothing is shrunk.
+   ========================================================================== */
+[class*="text-[9px]"],
+[class*="text-[10px]"],
+[class*="text-[11px]"],
+[class*="text-[11.5px]"],
+[class*="text-[0.7rem]"] {
+  font-size: 12px !important;
 }

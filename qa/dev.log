@@ -1,0 +1,20 @@
+
+> degreefyd-new@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.39:3000
+- Environments: .env.local
+✓ Ready in 1509ms
+✓ Running next.config.mjs took 82ms
+
+ GET /universities/upes-online 404 in 2.8s (next.js: 2.1s, application-code: 736ms)
+ GET / 200 in 567ms (next.js: 23ms, application-code: 544ms)
+ GET /universities 200 in 356ms (next.js: 19ms, application-code: 337ms)
+ GET /colleges/lovely-professional-university-online 200 in 2.3s (next.js: 1357ms, application-code: 923ms)
+ GET /colleges/lovely-professional-university-online/admission 200 in 574ms (next.js: 22ms, application-code: 553ms)
+ GET /colleges/lovely-professional-university-online/courses 200 in 497ms (next.js: 19ms, application-code: 478ms)
+College segment "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+College segment "scholarships" is not served by the API for lovely-professional-university-online/scholarships; falling back to the base college payload.
+ GET /colleges/lovely-professional-university-online/scholarships 200 in 550ms (next.js: 22ms, application-code: 529ms)
